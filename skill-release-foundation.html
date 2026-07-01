@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/release-foundation — Scared to Touch It</title><style>
+:root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.62;margin:0;padding:0;background:#fff}
+main{max-width:720px;margin:0 auto;padding:6px 24px 60px}
+.topnav{position:sticky;top:0;background:rgba(255,255,255,.93);backdrop-filter:saturate(180%) blur(8px);-webkit-backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line);text-align:center;padding:11px 12px;font-size:14px;z-index:10}
+.topnav a{color:#555;text-decoration:none;margin:0 2px;padding:5px 9px;border-radius:6px;display:inline-block}
+.topnav a:hover{background:#f3f3f3}
+.topnav a.here{color:#111;font-weight:700;background:#eee}
+.topnav a.get{color:#4a6fa5;font-weight:700}
+.topnav a.get:hover{background:#eef2f8}
+.topnav .sep{color:#cfcfcf}
+h1{font-size:28px;line-height:1.2;border-bottom:2px solid #333;padding-bottom:9px;margin:26px 0 16px}
+.gate1 h1{border-color:var(--g1)} .gate2 h1{border-color:var(--g2)} .gate3 h1{border-color:var(--g3)}
+h2{font-size:20px;margin-top:30px}
+h2 code{background:transparent;padding:0;font-size:1em;font-weight:700}
+h2 a{text-decoration:none;border-bottom:2px solid rgba(0,0,0,.16);padding-bottom:1px;color:inherit}
+h2 a:hover{border-bottom-color:currentColor}
+.gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
+.start h2 a{color:#444}
+.lead{font-size:17px;color:#444}
+.taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
+code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
+a{color:#4a6fa5}
+table{border-collapse:collapse;margin:18px 0;width:100%;font-size:13.5px}
+th,td{border:1px solid #ccc;padding:8px 11px;text-align:left;vertical-align:top}
+th{background:#f0f0f0}
+td a{font-weight:600;text-decoration:none}
+td a:hover{text-decoration:underline}
+ul,ol{padding-left:22px}
+li{margin:5px 0}
+strong{color:#000}
+em{color:#666}
+svg{max-width:100%;height:auto;display:block;margin:6px auto}
+video{width:100%;border-radius:11px;border:1px solid #e6e6e6;background:#fafafa;display:block;margin:14px 0 6px}
+figure.fig{margin:22px 0}
+figure.fig figcaption{font-size:13px;color:#8a8a8a;text-align:center;margin-top:8px;font-style:italic}
+.cal{border-left:4px solid #ccc;background:#fafafa;padding:12px 18px;margin:20px 0;border-radius:0 6px 6px 0;font-size:15px}
+.cal .lbl{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.cal p{margin:6px 0}
+.cal.do{border-left-color:var(--g1);background:#f1f7f2}.cal.do .lbl{color:#39623f}
+.cal.plain{border-left-color:#6b86b3;background:#f2f5fa}.cal.plain .lbl{color:#3f5780}
+.cal.reality{border-left-color:var(--g2);background:#fbf5ec}.cal.reality .lbl{color:#8f6011}
+.cal.stop{border-left-color:#b5483d;background:#f9ece9}.cal.stop .lbl{color:#9a382c}
+.gatecheck{border:2px solid #ccc;border-radius:11px;padding:18px 20px;margin:14px 0 26px;background:#fbfbfb}
+.gatecheck .q{display:block;font-size:13px;letter-spacing:.05em;text-transform:uppercase;font-weight:800;margin-bottom:9px}
+.gatecheck p{margin:8px 0}
+.gatecheck.g1{border-color:var(--g1);background:#f4faf5}.gatecheck.g1 .q{color:#39623f}
+.gatecheck.g2{border-color:var(--g2);background:#fdf7ee}.gatecheck.g2 .q{color:#8f6011}
+.gatecheck.g3{border-color:var(--g3);background:#f4f7fc}.gatecheck.g3 .q{color:#33486b}
+.pagenav{margin-top:46px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-size:15px}
+.pagenav a{color:#4a6fa5;text-decoration:none;font-weight:600}
+.pagenav .spacer{flex:1}
+@media (max-width:520px){main{padding:6px 16px 48px}.topnav a{padding:5px 7px}h1{font-size:24px}}
+</style></head><body class="gate3"><nav class="topnav"><a href="index.html">Start</a><span class="sep">·</span><a href="gate-1.html">Gate 1</a><span class="sep">·</span><a href="gate-2.html">Gate 2</a><span class="sep">·</span><a href="gate-3.html" class="here">Gate 3</a><span class="sep">·</span><a href="everything.html">Everything</a><span class="sep">·</span><a href="https://github.com/avarsklar/lead-developer-skills" class="get" target="_blank" rel="noopener">Get the skills ↗</a></nav><main><h1 id="release-foundation"><code>/release-foundation</code></h1>
+<p class="lead">Put your new features on a calendar instead of shipping each one the second it's done. Run once.</p>
+
+<video controls preload="metadata" playsinline>
+<source src="videos/release-foundation.mp4" type="video/mp4">
+Your browser can't play this. <a href="videos/release-foundation.mp4">Download the video</a>.
+</video>
+
+<p><strong>The fear it kills:</strong> <em>"I ship everything the second it's done, and I'm announcing features the night before."</em></p>
+<h2 id="what-it-does">What it does</h2>
+<ul>
+<li>You <strong>pick how often you release</strong> — every week / 2 weeks / month.</li>
+<li>It builds — and <strong>shows you</strong> — a <strong>calendar</strong> of which feature goes out on which date.</li>
+<li>A finished feature <strong>waits in a holding pen</strong> until its day, instead of going live the moment it's built.</li>
+<li>It teaches the rule that ends the panic: <strong>miss the train, catch the next one.</strong></li>
+</ul>
+<h2 id="when-to-run-it">When to run it</h2>
+<p>Once, when you're growing your app into a real, ongoing thing and putting new features out to real users.</p>
+<h2 id="when-to-stop-or-skip">When to stop or skip</h2>
+<p><strong>Stop if your app isn't live to real strangers yet</strong> — a calendar solves a problem you only have once real people depend on you; until then, just keep shipping freely with <a href="skill-ship-change.html"><code>/ship-change</code></a>. Also skip if it's a finished personal thing you only tinker with.</p>
+<h2 id="before-this-you-need">Before this, you need</h2>
+<p><a href="skill-safety-net.html"><code>/safety-net</code></a> and <a href="skill-ship-change.html"><code>/ship-change</code></a>.</p>
+<h2 id="after-this-do-this-skill">After this — do this skill</h2>
+<p><strong><a href="skill-release.html"><code>/release</code></a></strong> — what you run on each release date to put a parked feature live, seatbelts on.</p><div class="pagenav"><a href="gate-3.html">&larr; Back to Gate 3</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>

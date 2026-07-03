@@ -17,7 +17,7 @@ It runs in two parts.
 - Part 1 also writes hard, standing rules for your 2 a.m. AI, so it stays a careful reader on your already-tested way back instead of an improviser.
 - **Part 2** (45–90 minutes; recommended now, bookable for later): rehearses the way back for real, builds an in-app banner to tell users, and wires the "your app is down" alarm to your phone.
 
-<!-- ✍️ AVA (4 of 4): 2–3 sentences here, first person — your first rehearsal caught a real bug in your own rollback script, the way back you'd been counting on; you fixed it and re-ran the drill until it passed. Your words. -->
+When I did the practice run on my own app, the undo I was counting on turned out to be broken. It had a bug I never would have found until a real emergency, probably at the worst possible time. We fixed it during the drill and ran it again until I watched it actually work.
 
 ## When to run it
 

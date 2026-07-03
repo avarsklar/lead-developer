@@ -15,7 +15,7 @@ Your browser can't play this. <a href="videos/go-live-check.mp4">Download the vi
 - Makes each one fail on purpose, so you see the net catch it: the alert landing on your phone, the stranger's read getting blocked, the test email arriving in your inbox.
 - Renders a blunt **go / no-go**.
 
-<!-- ✍️ AVA (3 of 4): 2 sentences here, first person — the first time you ran this on a real app, the error monitor looked set up but was silently catching nothing in production; the check made it fail, nothing arrived, and the verdict was NO-GO. Say it your way. It's the strongest proof on this page. -->
+The first time I ran this check on one of my apps, it failed. The alert system I thought I had was actually doing nothing. It looked set up, but when the check broke the app on purpose, no alert ever came. If I had launched like that, I would have found out about problems from users instead of alerts.
 
 ## When to run it
 

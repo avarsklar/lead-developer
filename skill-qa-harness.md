@@ -15,8 +15,6 @@ Your browser can't play this. <a href="videos/qa-harness.mp4">Download the video
 - The AI breaks it on purpose, once, so you watch the check go **red**.
 - After that, the check runs by itself on every change, inside your `/ship-change` loop. The AI writes and maintains the test code; you name the flow and watch the proof.
 
-<!-- ✍️ AVA (optional): swap the generic examples above (log in, buy, pay) for the real first flow you protected on your own app, in your words. Real specifics read human. -->
-
 ## When to run it
 
 When you're tired of clicking through your app by hand after every change, or you're hardening for real traffic. Plan a real sit-down session the first time: most flows take a few minutes each, but the buy-button/checkout flow is honest work and takes about an hour on its own. Re-runs are short.

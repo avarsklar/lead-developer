@@ -138,9 +138,7 @@ Or see [**everything on one page**](everything.html).
 
 ## Who made this
 
-I am a college student collaborating with two Rice professors. I have run these skills on multiple apps. You can find me on [LinkedIn](#) or email me at [avarsklar@gmail.com](mailto:avarsklar@gmail.com).
-
-<!-- ✍️ AVA: one thing left here — give me your LinkedIn URL and I'll wire it into the link above (it currently points nowhere). -->
+I am a college student collaborating with two Rice University professors. I have run these skills on multiple apps. You can find me on [LinkedIn](https://www.linkedin.com/in/ava-sklar-06851a2a2) or email me at [avarsklar@gmail.com](mailto:avarsklar@gmail.com).
 
 <div class="cal plain" markdown="1" id="get">
 <span class="lbl">Get the skills</span>

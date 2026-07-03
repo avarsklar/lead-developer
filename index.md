@@ -6,7 +6,7 @@
 
 That fear is normal. It's what crossing from *making something work once* into *running something real* feels like, and nobody handed you the map for that part.
 
-<!-- ✍️ AVA (1 of 4): 2–3 sentences in your own words go right here, between the fear and "This is the map." You were that person — name your app, ground the fear in a real week. Write it the way you'd say it out loud. -->
+I created an app for fun for my college campus, but quickly became scared of it when strangers' data and money transactions became real. I didn't know how to secure the site, how to change things, or what steps to take next.
 
 This is the map. It's short on purpose.
 
@@ -136,7 +136,11 @@ Once `/readiness-check` tells you your gate, read that gate's page; each one sta
 
 Or see [**everything on one page**](everything.html).
 
-<!-- ✍️ AVA (2 of 4): a short "Who made this" block goes right here, above the Get-the-skills box. 2–4 first-person sentences: your name, that you built and run these on your own apps, and ONE concrete result (the drill that caught a real bug in your own rollback script, or the launch check that failed your own app and deserved to). A way to reach you (GitHub issues) makes a good last line. -->
+## Who made this
+
+I am a college student collaborating with two Rice professors. I have run these skills on multiple apps. You can find me on [LinkedIn](#) or email me at [avarsklar@gmail.com](mailto:avarsklar@gmail.com).
+
+<!-- ✍️ AVA: one thing left here — give me your LinkedIn URL and I'll wire it into the link above (it currently points nowhere). -->
 
 <div class="cal plain" markdown="1" id="get">
 <span class="lbl">Get the skills</span>

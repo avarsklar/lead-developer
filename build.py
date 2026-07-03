@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the multi-page 'Scared to Touch It' handbook site.
+"""Build the multi-page 'Lead Developer Hardening Handbook' site.
 
 Two kinds of pages:
   * MAIN pages (Start, the three gates, Everything) — sticky top nav + prev/next.
@@ -59,6 +59,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -96,7 +97,7 @@ figure.fig figcaption{font-size:13px;color:#8a8a8a;text-align:center;margin-top:
 
 TEMPLATE = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width, initial-scale=1">'
-            '<title>{title} — Scared to Touch It</title><style>{css}</style></head>'
+            '<title>{title} — Lead Developer Hardening Handbook</title><style>{css}</style></head>'
             '<body class="{bodyclass}">{nav}<main>{body}{footer}</main></body></html>')
 
 

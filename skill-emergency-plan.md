@@ -11,10 +11,13 @@ Your browser can't play this. <a href="videos/emergency-plan.mp4">Download the v
 
 ## What it does
 
-It runs in **two parts**, and says so up front.
+It runs in two parts.
 
-- **Part 1** (15–20 min, touches nothing live): a **one-page card** on every device — *is it just me or everyone? how do I get back to working? what do I tell my users? who do I call?* — plus a **tested leash** on your 2 a.m. AI so it stays a careful reader.
-- **Part 2** (recommended now, bookable for later): rehearses the **way back** for real, builds an **in-app banner** to tell users, and wires the **"your app is down" alarm** to your phone.
+- **Part 1** (15–20 minutes, touches nothing live): a one-page card on every device — *is it just me or everyone? how do I get back to working? what do I tell my users? who do I call?*
+- Part 1 also writes hard, standing rules for your 2 a.m. AI, so it stays a careful reader on your already-tested way back instead of an improviser.
+- **Part 2** (45–90 minutes; recommended now, bookable for later): rehearses the way back for real, builds an in-app banner to tell users, and wires the "your app is down" alarm to your phone.
+
+<!-- ✍️ AVA (4 of 4): 2–3 sentences here, first person — your first rehearsal caught a real bug in your own rollback script, the way back you'd been counting on; you fixed it and re-ran the drill until it passed. Your words. -->
 
 ## When to run it
 
@@ -22,12 +25,12 @@ When you're about to depend on your app being up, or you're scared of the night 
 
 ## When to stop or skip
 
-Skip if nobody really depends on it being up yet. Re-check the card and alarm every few months — they rot too.
+Skip if nobody really depends on it being up yet. Re-check the card and alarm every few months. They rot too.
 
-## Before this, you need
+## What you need first
 
-[`/safety-net`](skill-safety-net.html) — a **tested way back** is required. Part 2's drill + banner use [`/ship-change`](skill-ship-change.html)'s sandbox.
+[`/safety-net`](skill-safety-net.html): a tested way back is required. Part 2's drill and banner use [`/ship-change`](skill-ship-change.html)'s private copy.
 
-## After this — do this skill
+## What's next
 
-That's **Gate 2** — you're safe for real strangers. If you're growing this into a real, ongoing thing, climb to Gate 3: **[`/release-foundation`](skill-release-foundation.html)**.
+That's Gate 2 — you're safe for real strangers. If you're growing this into a real, ongoing thing, climb to Gate 3: **[`/release-foundation`](skill-release-foundation.html)**.

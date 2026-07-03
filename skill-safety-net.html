@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/safety-net — Scared to Touch It</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/safety-net — Lead Developer Hardening Handbook</title><style>
 :root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -20,6 +20,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -64,17 +65,19 @@ Your browser can't play this. <a href="videos/safety-net.mp4">Download the video
 <p><strong>The fear it kills:</strong> <em>"If I touch it, I'll lose my work or my data."</em></p>
 <h2 id="what-it-does">What it does</h2>
 <ul>
-<li>A <strong>saved version</strong> you can return to in one move.</li>
-<li>Your <strong>secret keys</strong> pulled out of the code and replaced with brand-new ones — so the exposed old ones are dead and useless.</li>
-<li><strong>Automatic backups</strong> of your data.</li>
-<li>A <strong>restore you watch work</strong> with your own eyes — because a backup you've never restored from isn't really a backup.</li>
+<li>A saved version of your app you can return to in one move.</li>
+<li>Your secret keys pulled out of the code and replaced with brand-new ones. (When an AI builds an app it often pastes keys straight into the code, where anyone who ever sees that code can use them. Replacing them makes the exposed ones dead and useless.)</li>
+<li>A safe home for those keys: a password manager, so your logins live in one locked place instead of scattered in your head or a notes file.</li>
+<li>A guard on the door that blocks any save containing a secret, so one can't slip back into your code later.</li>
+<li>Automatic nightly backups of your data.</li>
+<li>A restore you watch work with your own eyes — because a backup you've never restored from isn't really a backup.</li>
 </ul>
-<p>After this, you literally cannot lose your work and you cannot lose your data.</p>
+<p>After this, no single mistake can wipe you out: every version of your code is saved, your data backs up on its own, and you've watched a restore actually work.</p>
 <h2 id="when-to-run-it">When to run it</h2>
-<p>Once per project, before your first real change goes live.</p>
+<p>Once per project, before your first real change goes live. About 20–30 minutes for a simple app, closer to an hour if you have a real database to back up and restore-test.</p>
 <h2 id="when-to-stop-or-skip">When to stop or skip</h2>
-<p>It's a <strong>one-time</strong> setup — don't re-walk finished steps. A plain static site can skip backups (its history <em>is</em> the backup).</p>
-<h2 id="before-this-you-need">Before this, you need</h2>
-<p>Nothing — this is the floor everything else rests on.</p>
-<h2 id="after-this-do-this-skill">After this — do this skill</h2>
-<p><strong><a href="skill-ship-change.html"><code>/ship-change</code></a></strong> — make your first change the safe way. That completes Gate 1, and it's the loop you'll live in from here on.</p><div class="pagenav"><a href="gate-1.html">&larr; Back to Gate 1</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>
+<p>It's a one-time setup: don't re-walk finished steps. An app that stores nothing (no accounts, no orders, just pages people read) can skip the backup steps; the saved versions are the backup.</p>
+<h2 id="what-you-need-first">What you need first</h2>
+<p>Nothing. This is the floor everything else rests on.</p>
+<h2 id="whats-next">What's next</h2>
+<p><strong><a href="skill-ship-change.html"><code>/ship-change</code></a></strong>: make your first change the safe way. That completes Gate 1, and it's the loop you'll live in from here on.</p><div class="pagenav"><a href="gate-1.html">&larr; Back to Gate 1</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>

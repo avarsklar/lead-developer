@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/qa-harness — Scared to Touch It</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/qa-harness — Lead Developer Hardening Handbook</title><style>
 :root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -20,6 +20,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -64,15 +65,17 @@ Your browser can't play this. <a href="videos/qa-harness.mp4">Download the video
 <p><strong>The fear it kills:</strong> <em>"How do I know nothing broke? A green checkmark feels like proof, but it might be lying to me."</em></p>
 <h2 id="what-it-does">What it does</h2>
 <ul>
-<li>You <strong>name a flow that must never break</strong> — <em>log in, buy, pay…</em> — in plain English.</li>
-<li>The AI <strong>breaks it on purpose, once</strong>, so you watch the check go <strong>red</strong>.</li>
-<li>After that, the check <strong>runs by itself on every change</strong>, inside your <code>/ship-change</code> loop. You never touch test code.</li>
+<li>You name a flow that must never break — <em>log in, buy, pay…</em> — in plain English.</li>
+<li>The AI breaks it on purpose, once, so you watch the check go <strong>red</strong>.</li>
+<li>After that, the check runs by itself on every change, inside your <code>/ship-change</code> loop. The AI writes and maintains the test code; you name the flow and watch the proof.</li>
 </ul>
+<!-- ✍️ AVA (optional): swap the generic examples above (log in, buy, pay) for the real first flow you protected on your own app, in your words. Real specifics read human. -->
+
 <h2 id="when-to-run-it">When to run it</h2>
-<p>When you're tired of clicking through your app by hand after every change, or you're hardening for real traffic.</p>
+<p>When you're tired of clicking through your app by hand after every change, or you're hardening for real traffic. Plan a real sit-down session the first time: most flows take a few minutes each, but the buy-button/checkout flow is honest work and takes about an hour on its own. Re-runs are short.</p>
 <h2 id="when-to-stop-or-skip">When to stop or skip</h2>
-<p>Set up <strong>per flow</strong> — re-prove a check only when that flow itself changes. It drives a real web browser, so it fits web apps; <strong>phone apps aren't covered yet</strong>.</p>
-<h2 id="before-this-you-need">Before this, you need</h2>
-<p><a href="skill-ship-change.html"><code>/ship-change</code></a> — it provides your must-not-break list and the private sandbox.</p>
-<h2 id="after-this-do-this-skill">After this — do this skill</h2>
-<p><strong><a href="skill-go-live-check.html"><code>/go-live-check</code></a></strong> — prove your nets actually catch real failures before you let strangers in.</p><div class="pagenav"><a href="gate-2.html">&larr; Back to Gate 2</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>
+<p>Set up per flow; re-prove a check only when that flow itself changes. It drives a real web browser, so it fits web apps; phone apps aren't covered yet.</p>
+<h2 id="what-you-need-first">What you need first</h2>
+<p><a href="skill-ship-change.html"><code>/ship-change</code></a>, which provides your must-not-break list and the private copy the checks run on.</p>
+<h2 id="whats-next">What's next</h2>
+<p><strong><a href="skill-go-live-check.html"><code>/go-live-check</code></a></strong>: prove your nets actually catch real failures before you let strangers in.</p><div class="pagenav"><a href="gate-2.html">&larr; Back to Gate 2</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>

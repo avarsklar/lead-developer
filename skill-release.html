@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/release — Scared to Touch It</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/release — Lead Developer Hardening Handbook</title><style>
 :root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -20,6 +20,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -64,17 +65,17 @@ Your browser can't play this. <a href="videos/release.mp4">Download the video</a
 <p><strong>The fear it kills:</strong> <em>"I want to announce a feature for a date and actually have it ready — not pull an all-nighter or ship something that quietly broke."</em></p>
 <h2 id="what-it-does">What it does</h2>
 <ul>
-<li><strong>Catches your parked feature up</strong> to your live app.</li>
-<li>You <strong>watch your safety checks go green</strong> — proof nothing important broke.</li>
-<li>On your okay, it <strong>flips the feature on</strong> — the real go-live, because it was held until now.</li>
-<li>Saves a <strong>bookmark</strong> you can jump back to, and writes the plain <strong>what-changed notes.</strong></li>
+<li>Catches your parked feature up to your live app.</li>
+<li>You watch your safety checks go green: proof nothing important broke.</li>
+<li>On your okay, it flips the feature on. This is the real go-live, because the feature stayed parked until now.</li>
+<li>Saves a bookmark you can jump back to, and writes the plain what-changed notes.</li>
 </ul>
 <p>If a check goes <strong>red</strong>, it stops cold and refuses to bless the version — that's the seatbelt winning.</p>
 <h2 id="when-to-run-it">When to run it</h2>
 <p>On each release date, or whenever a parked feature is ready.</p>
 <h2 id="when-to-stop-or-skip">When to stop or skip</h2>
-<p><strong>Stop if your app isn't live to real strangers yet</strong> — there's nothing to "release" to; just ship it with <a href="skill-ship-change.html"><code>/ship-change</code></a>. A red check stops the release until you fix it.</p>
-<h2 id="before-this-you-need">Before this, you need</h2>
+<p>Stop if your app isn't live to real strangers yet: there's nothing to "release" to; just ship it with <a href="skill-ship-change.html"><code>/ship-change</code></a>. A red check stops the release until you fix it.</p>
+<h2 id="what-you-need-first">What you need first</h2>
 <p><a href="skill-safety-net.html"><code>/safety-net</code></a>, <a href="skill-qa-harness.html"><code>/qa-harness</code></a> (the checks <em>are</em> the seatbelts), and <a href="skill-ship-change.html"><code>/ship-change</code></a>.</p>
-<h2 id="after-this-do-this-skill">After this — do this skill</h2>
-<p><strong><a href="skill-handoff.html"><code>/handoff</code></a></strong> — when you want someone else (or future-you) to be able to run it without you.</p><div class="pagenav"><a href="gate-3.html">&larr; Back to Gate 3</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>
+<h2 id="whats-next">What's next</h2>
+<p><strong><a href="skill-handoff.html"><code>/handoff</code></a></strong>: when you want someone else (or future-you) to be able to run it without you.</p><div class="pagenav"><a href="gate-3.html">&larr; Back to Gate 3</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>

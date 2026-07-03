@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/go-live-check — Scared to Touch It</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/go-live-check — Lead Developer Hardening Handbook</title><style>
 :root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -20,6 +20,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -64,15 +65,17 @@ Your browser can't play this. <a href="videos/go-live-check.mp4">Download the vi
 <p><strong>The fear it kills:</strong> <em>"It'll break and I won't even know — I'll find out from an angry email."</em></p>
 <h2 id="what-it-does">What it does</h2>
 <ul>
-<li>Stands up the nets — an <strong>error alert</strong>, an <strong>"is it down?" alert</strong>, a wide-open-database check, transaction checks, an email that actually arrives.</li>
-<li><strong>Makes each one fail on purpose</strong> and you watch the alert <strong>land on your own phone.</strong></li>
-<li>Renders a blunt <strong>go / no-go.</strong></li>
+<li>Sets up the nets: an error alert, an "is it down?" alert, a check that your database isn't readable by strangers, a check that strangers can't get into accounts that aren't theirs, checks that the money moved matches what was ordered, and proof that the emails your app sends (receipts, password resets) actually arrive.</li>
+<li>Makes each one fail on purpose, so you see the net catch it: the alert landing on your phone, the stranger's read getting blocked, the test email arriving in your inbox.</li>
+<li>Renders a blunt <strong>go / no-go</strong>.</li>
 </ul>
+<!-- ✍️ AVA (3 of 4): 2 sentences here, first person — the first time you ran this on a real app, the error monitor looked set up but was silently catching nothing in production; the check made it fail, nothing arrived, and the verdict was NO-GO. Say it your way. It's the strongest proof on this page. -->
+
 <h2 id="when-to-run-it">When to run it</h2>
-<p>Before you launch to the public or push for growth — and <strong>every few months after</strong>, because monitors quietly rot.</p>
+<p>Before you launch to the public or push for growth; figure 30–45 minutes the first time, shorter on re-runs. Then every few months after: a monitor you set up in March can be quietly dead by June.</p>
 <h2 id="when-to-stop-or-skip">When to stop or skip</h2>
-<p>It gates by <em>verdict</em>, not by force — a <strong>FAIL</strong> means "not yet," and the FAIL itself becomes your next move. Re-run after you fix it.</p>
-<h2 id="before-this-you-need">Before this, you need</h2>
-<p><a href="skill-safety-net.html"><code>/safety-net</code></a>. The money and sign-in checks also lean on <a href="skill-ship-change.html"><code>/ship-change</code></a>'s private sandbox.</p>
-<h2 id="after-this-do-this-skill">After this — do this skill</h2>
-<p><strong><a href="skill-emergency-plan.html"><code>/emergency-plan</code></a></strong> — your calm plan for the night something breaks anyway. That's the last rung of the go-live gate.</p><div class="pagenav"><a href="gate-2.html">&larr; Back to Gate 2</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>
+<p>A <strong>no-go</strong> doesn't lock you out; it means "not yet." Whatever failed is your next job: fix it, then re-run.</p>
+<h2 id="what-you-need-first">What you need first</h2>
+<p><a href="skill-safety-net.html"><code>/safety-net</code></a>. The money and sign-in checks also lean on <a href="skill-ship-change.html"><code>/ship-change</code></a>'s private copy.</p>
+<h2 id="whats-next">What's next</h2>
+<p><strong><a href="skill-emergency-plan.html"><code>/emergency-plan</code></a></strong>: your calm plan for the night something breaks anyway. That's the last piece of Gate 2.</p><div class="pagenav"><a href="gate-2.html">&larr; Back to Gate 2</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>

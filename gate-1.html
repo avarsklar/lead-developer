@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gate 1 — Scared to Touch It</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gate 1 — Lead Developer Hardening Handbook</title><style>
 :root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -20,6 +20,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -56,26 +57,19 @@ figure.fig figcaption{font-size:13px;color:#8a8a8a;text-align:center;margin-top:
 </style></head><body class="gate1"><nav class="topnav"><a href="index.html">Start</a><span class="sep">·</span><a href="gate-1.html" class="here">Gate 1</a><span class="sep">·</span><a href="gate-2.html">Gate 2</a><span class="sep">·</span><a href="gate-3.html">Gate 3</a><span class="sep">·</span><a href="everything.html">Everything</a><span class="sep">·</span><a href="https://github.com/avarsklar/lead-developer-skills" class="get" target="_blank" rel="noopener">Get the skills ↗</a></nav><main><h1 id="gate-1-stop-being-scared-to-touch-it">Gate 1 — Stop being scared to touch it</h1>
 <div class="gatecheck g1">
 <p><span class="q">Are you here yet?</span>
-If the thought of changing your live app makes you nervous — <em>what if I break it, what if I lose my work</em> — then <strong>yes, you're here.</strong> And so is everyone else: every app every senior engineer has ever built started exactly here. It's not a grade or a failure. It's the trailhead.</p>
+If the thought of changing your live app makes you nervous — <em>what if I break it, what if I lose my work</em> — then <strong>yes, you're here.</strong> So is everyone else: every app any senior engineer has ever built started exactly here. It's not a grade or a failure.</p>
 </div>
 <p><strong>The fear this kills:</strong> <em>"If I touch it, I'll break it, or lose my work."</em></p>
-<p>Two tools. That's the whole gate.</p>
-<p class="taphint">Tap a skill's name to open its own page — each has a short 20-second video.</p>
+<p>Two skills. That's the whole gate.</p>
+<p class="taphint">Tap a skill's name to open its own page; each has a short 20-second video.</p>
 
 <h2 id="safety-net-run-once"><a href="skill-safety-net.html"><code>/safety-net</code></a> — run once</h2>
-<p>A floor you can't fall through. When it's done you have four things, each <strong>proven</strong>, not just switched on:</p>
-<ul>
-<li>a saved working version you can return to in <strong>one move</strong>,</li>
-<li>your secret passwords pulled out of the code and replaced with brand-new ones, so the exposed old ones are dead and useless,</li>
-<li>automatic backups, and</li>
-<li>a backup you <strong>watched</strong> get restored, with your own eyes — because a backup you've never restored from isn't really a backup.</li>
-</ul>
-<p>After this, you literally cannot lose your work and you cannot lose your data.</p>
+<p>A floor you can't fall through: a saved working version you can return to in one move, your secret keys moved out of the code (AI often pastes them right in) and into a password manager, and automatic backups you've watched actually restore. It takes 20–30 minutes for a simple app, closer to an hour if you have a real database. The full list is on its page.</p>
 <h2 id="ship-change-run-every-single-time-you-change-anything"><a href="skill-ship-change.html"><code>/ship-change</code></a> — run <em>every single time</em> you change anything</h2>
-<p>The everyday loop, however small the change — a button color, a typo, a whole feature, doesn't matter: try it on a private copy first, look at it, publish only on your okay — with a fresh way back every time. Its first run quietly builds the private copy <code>/safety-net</code> left for it, so by the end of your first change the whole gate is set up <em>and</em> you've used it once.</p>
+<p>The everyday loop, for any change — a button color, a typo, a whole feature. Try it on a private copy first, look at it, and publish only when you say okay. A fresh way back comes with every change. Its first run also builds that private copy, so finishing your first change finishes the setup too.</p>
 <div class="cal reality">
 <p><span class="lbl">Reality check</span>
-"Proven" means <strong>you watched it catch something</strong> — not that a setting is switched on. You don't confirm a net <em>exists</em>; you watch it <em>work</em>. That's what makes the calm real instead of borrowed.</p>
+"Proven" means <strong>you watched it happen</strong>: the restore actually restoring, the change checked with your own eyes before it went live. Not a setting switched on. That's what makes the calm real instead of borrowed.</p>
 </div>
-<p><strong>That's Gate 1 — for most people, the whole emergency, handled.</strong> You only need to go further if real money, other people's data, or people <em>depending on you being up</em> enters the picture.</p>
-<p><a href="gate-2.html">Next: <strong>Gate 2 — safe for real strangers</strong> &rarr;</a></p><div class="pagenav"><a href="index.html">&larr; Start</a><span class="spacer"></span><a href="gate-2.html">Gate 2 &rarr;</a></div></main></body></html>
+<p>That's Gate 1 — for most people, the whole fear, handled. You only need to go further when real money, other people's data, or people counting on the app being up enter the picture.</p>
+<p><a href="gate-2.html">Next: <strong>Gate 2 — Safe for real strangers</strong> &rarr;</a></p><div class="pagenav"><a href="index.html">&larr; Start</a><span class="spacer"></span><a href="gate-2.html">Gate 2 &rarr;</a></div></main></body></html>

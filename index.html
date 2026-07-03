@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Start — Scared to Touch It</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Start — Lead Developer Hardening Handbook</title><style>
 :root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -20,6 +20,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -53,19 +54,22 @@ figure.fig figcaption{font-size:13px;color:#8a8a8a;text-align:center;margin-top:
 .pagenav a{color:#4a6fa5;text-decoration:none;font-weight:600}
 .pagenav .spacer{flex:1}
 @media (max-width:520px){main{padding:6px 16px 48px}.topnav a{padding:5px 7px}h1{font-size:24px}}
-</style></head><body class="start"><nav class="topnav"><a href="index.html" class="here">Start</a><span class="sep">·</span><a href="gate-1.html">Gate 1</a><span class="sep">·</span><a href="gate-2.html">Gate 2</a><span class="sep">·</span><a href="gate-3.html">Gate 3</a><span class="sep">·</span><a href="everything.html">Everything</a><span class="sep">·</span><a href="https://github.com/avarsklar/lead-developer-skills" class="get" target="_blank" rel="noopener">Get the skills ↗</a></nav><main><h1 id="scared-to-touch-your-own-app">Scared to touch your own app?</h1>
+</style></head><body class="start"><nav class="topnav"><a href="index.html" class="here">Start</a><span class="sep">·</span><a href="gate-1.html">Gate 1</a><span class="sep">·</span><a href="gate-2.html">Gate 2</a><span class="sep">·</span><a href="gate-3.html">Gate 3</a><span class="sep">·</span><a href="everything.html">Everything</a><span class="sep">·</span><a href="https://github.com/avarsklar/lead-developer-skills" class="get" target="_blank" rel="noopener">Get the skills ↗</a></nav><main><p class="kicker">Lead Developer Hardening Handbook</p>
+
+<h1 id="scared-to-touch-your-own-app">Scared to touch your own app?</h1>
 <p class="lead">You built something real with AI. It works. People use it — maybe pay for it. And now you're scared to change a single thing, because you might break it.</p>
 
-<p>That fear isn't silly, and it isn't a sign you're a fraud. It means you crossed from <em>making something work once</em> into <em>running something real</em> — and nobody handed you the map for that part.</p>
+<p>That fear is normal. It's what crossing from <em>making something work once</em> into <em>running something real</em> feels like, and nobody handed you the map for that part.</p>
+<!-- ✍️ AVA (1 of 4): 2–3 sentences in your own words go right here, between the fear and "This is the map." You were that person — name your app, ground the fear in a real week. Write it the way you'd say it out loud. -->
+
 <p>This is the map. It's short on purpose.</p>
 <div class="cal do">
 <p><span class="lbl">Start here</span>
-Not sure where you stand? Open your project and run <strong><code>/readiness-check</code></strong> — five minutes, four easy questions. It reads your app and tells you <strong>which gate you're at</strong> and <strong>the one next move.</strong> Everything below is just the <em>why</em>; this is the <em>do</em>.</p>
+Not sure where you stand? Open your app's folder in Claude Code and run <strong><a href="skill-readiness-check.html"><code>/readiness-check</code></a></strong> — five minutes, four shrug-friendly questions, and it only looks; it never changes anything. It tells you which gate you're at and your next move. Don't have the skills yet? <a href="#get">Grab them first</a>; it takes about two minutes.</p>
 </div>
-<p>Here's the whole idea, then where each piece fits.</p>
 <h2 id="the-one-big-idea">The one big idea</h2>
-<p>Every fear you have about your app has a <strong>name</strong>, and every named fear has a <strong>smallest possible fix</strong> — not a course, not a rebuild, not a computer-science degree. You never do all of it at once. You add <strong>one safety net at a time</strong>, and only when you actually feel the fear it removes.</p>
-<p>We measure safety in <strong>gates</strong> — levels of how much of a net is under you. A gate is <em>not</em> a grade, a size, or a measure of success. It only answers one question: <em>how protected are you if something goes wrong?</em></p>
+<p>Every fear you have about your app has a name, and every named fear has a smallest possible fix — not a course, not a rebuild, not a computer-science degree. You add one safety net at a time, and only when you actually feel the fear it removes.</p>
+<p>Safety here is measured in <strong>gates</strong>: levels of how much net is under you. A gate answers one question: <em>how protected are you if something goes wrong?</em></p>
 <h2 id="two-things-people-confuse">Two things people confuse</h2>
 <p>There are two completely separate things, and your anxiety lives on the one nobody talks about:</p>
 <figure class="fig">
@@ -100,12 +104,11 @@ Not sure where you stand? Open your project and run <strong><code>/readiness-che
   <text x="370" y="320" font-size="12" fill="#a23b2e">that could fall over,</text>
   <text x="370" y="336" font-size="12" fill="#a23b2e">no one watching.</text>
 </svg>
-<figcaption>Your anxiety lives on the vertical axis. The dangerous corner is lots of people on something fragile — exactly what happens when you build something good with AI, fast.</figcaption>
+<figcaption>Your anxiety lives on the vertical axis. The dangerous corner is lots of people on something fragile. That's exactly what happens when you build something good with AI, fast.</figcaption>
 </figure>
 
 <h2 id="the-trick-that-makes-this-safe-to-do-with-ai">The trick that makes this safe to do with AI</h2>
-<p>A naive prompt — <em>"AI, fix my checkout"</em> — behaves like an eager junior: it edits your <strong>live</strong> app directly and hopes it worked. That really <em>is</em> a leap of faith, and being scared of it is correct.</p>
-<p>The whole approach here is to wrap the AI in the rails a careful senior would never skip:</p>
+<p>A naive prompt — <em>"AI, fix my checkout"</em> — behaves like an eager junior, and being scared of that is correct. The whole approach here is to wrap the same AI in the rails a careful senior would never skip:</p>
 <figure class="fig">
 <svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
   <text x="175" y="28" text-anchor="middle" font-size="13.5" font-weight="700" fill="#a23b2e">The eager junior</text>
@@ -131,10 +134,10 @@ Not sure where you stand? Open your project and run <strong><code>/readiness-che
   <text x="505" y="296" text-anchor="middle" font-size="12" fill="#888">A one-move way back stays ready the whole time.</text>
   <text x="505" y="316" text-anchor="middle" font-size="12.5" font-weight="700" fill="#39623f">= a guided procedure with rails</text>
 </svg>
-<figcaption>Same AI, same prompt. The only difference is the procedure around it — and you are the one who approves each step.</figcaption>
+<figcaption>Same AI, same prompt. The only difference is the procedure around it.</figcaption>
 </figure>
 
-<p>You don't become a developer. You become <strong>the person who approves the gates</strong> — and you're already qualified for that, because you know what your app is supposed to do and you can look and tell if it's doing it.</p>
+<p>You don't become a developer. You become the person who gives the okay. You're already qualified for that, because you know what your app is supposed to do and you can look and tell if it's doing it.</p>
 <h2 id="the-whole-climb">The whole climb</h2>
 <figure class="fig">
 <svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
@@ -162,17 +165,19 @@ Not sure where you stand? Open your project and run <strong><code>/readiness-che
   <rect x="70" y="392" width="590" height="80" rx="8" fill="#f6f6f6" stroke="#dcdcdc"/>
   <rect x="70" y="392" width="7" height="80" rx="3" fill="#9aa0a6"/>
   <text x="92" y="418" font-size="15" font-weight="700" fill="#555">Gate 0 &#8212; Just shipped</text>
-  <text x="92" y="438" font-size="12.5" fill="#666">it works. that's real. no nets yet &#8212; the starting line everyone begins at</text>
+  <text x="92" y="438" font-size="12.5" fill="#666">it works. that's real. no nets yet &#8212; where everyone begins</text>
   <text x="92" y="460" font-size="11.5" fill="#9a9a9a">the front door &#8212; /readiness-check &#8212; tells you which gate you're at</text>
 </svg>
-<figcaption>Four levels. Most people need Gate 1 and stop there. You climb higher only when a higher gate's fear becomes <em>yours</em> — never to collect the whole set.</figcaption>
+<figcaption>Four gates, and the horizon above them. Most people need Gate 1 and stop there. You climb higher only when a higher gate's fear becomes <em>yours</em> — never to collect the whole set.</figcaption>
 </figure>
 
 <h2 id="where-to-go-from-here">Where to go from here</h2>
-<p>Once <code>/readiness-check</code> tells you your gate, read that gate's page — each one starts by helping you check <em>are you even here yet?</em></p>
-<p><a href="gate-1.html"><strong>Gate 1 — stop being scared to touch it</strong></a> · <a href="gate-2.html"><strong>Gate 2 — safe for real strangers</strong></a> · <a href="gate-3.html"><strong>Gate 3 — run it like a real thing</strong></a></p>
+<p>Once <code>/readiness-check</code> tells you your gate, read that gate's page; each one starts by helping you check <em>are you even here yet?</em></p>
+<p><a href="gate-1.html"><strong>Gate 1 — Stop being scared to touch it</strong></a> · <a href="gate-2.html"><strong>Gate 2 — Safe for real strangers</strong></a> · <a href="gate-3.html"><strong>Gate 3 — Run it like a real thing</strong></a></p>
 <p>Or see <a href="everything.html"><strong>everything on one page</strong></a>.</p>
-<div class="cal plain">
+<!-- ✍️ AVA (2 of 4): a short "Who made this" block goes right here, above the Get-the-skills box. 2–4 first-person sentences: your name, that you built and run these on your own apps, and ONE concrete result (the drill that caught a real bug in your own rollback script, or the launch check that failed your own app and deserved to). A way to reach you (GitHub issues) makes a good last line. -->
+
+<div class="cal plain" id="get">
 <p><span class="lbl">Get the skills</span>
-The nine skills are free to download and run with your own AI. <strong><a href="https://github.com/avarsklar/lead-developer-skills">Get them on GitHub ↗</a></strong> — clone or download, drop them into Claude Code, and run <code>/readiness-check</code>. Install steps are in the repo's README.</p>
+The nine skills are free, and they run in <strong>Claude Code</strong>, the same kind of AI you already build with, pointed at the folder your app lives in. <strong><a href="https://github.com/avarsklar/lead-developer-skills">Get them on GitHub ↗</a></strong>: click the green <strong>Code</strong> button, choose <strong>Download ZIP</strong> (no account needed), and follow the short install steps in the README. Then run <code>/readiness-check</code>.</p>
 </div><div class="pagenav"><span></span><span class="spacer"></span><a href="gate-1.html">Gate 1 &rarr;</a></div></main></body></html>

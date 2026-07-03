@@ -11,24 +11,24 @@ Your browser can't play this. <a href="videos/handoff.mp4">Download the video</a
 
 ## What it does
 
-- Writes down **where everything lives** — every account, who owns it, *where* each login is (never the password itself), and which lapses are time-bombs.
-- Writes a **first-day guide** for a brand-new operator.
-- **Proves the packet by cold-read:** a memory-less reader runs one real task from it alone, and every stuck point becomes a hole patched until it carries someone who knows nothing.
+- Writes down where everything lives: every account, who owns it, where each login is kept (never the password itself), and which lapses are time-bombs, like an expiring card or a domain up for renewal. A quiet watch keeps an eye on those dates for you.
+- Writes a first-day guide for a brand-new operator.
+- Then proves the packet: someone (or an AI) told nothing about your app runs one real task using only what's written. Every place they get stuck is a hole — you patch it and test again, until the packet alone is enough.
 
 It touches nothing live and never locks you out.
 
 ## When to run it
 
-When you're stepping away, handing the app to someone, or you just want the peace of mind that someone else *could* keep it alive.
+When you're stepping away, handing the app to someone, or you just want the peace of mind that someone else *could* keep it alive. The inventory and the cold-read are a real working session.
 
 ## When to stop or skip
 
-Peace-of-mind is the default. The **clean-break "real handover"** door opens only when you explicitly say *"I'm handing this to a real person now."* Refresh the packet every few months — it goes stale.
+Peace-of-mind is the default. The clean-break "real handover" door opens only when you explicitly say *"I'm handing this to a real person now."* Refresh the packet every few months; it goes stale. The skill sets two reminders so you don't have to remember.
 
-## Before this, you need
+## What you need first
 
-The **whole ladder** behind it — [`/safety-net`](skill-safety-net.html), [`/ship-change`](skill-ship-change.html), and your Gate-2 nets — so there's something real to write down.
+Everything behind it ([`/safety-net`](skill-safety-net.html), [`/ship-change`](skill-ship-change.html), and your Gate-2 nets), so there's something real to write down.
 
-## After this — do this skill
+## What's next
 
-Nothing — you've climbed the whole ladder. Your app is an asset now, not a leash. **You're free.**
+Nothing — you've climbed the whole thing. Your app is an asset now, not a leash. **You're free.**

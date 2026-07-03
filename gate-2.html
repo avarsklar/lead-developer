@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gate 2 — Scared to Touch It</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gate 2 — Lead Developer Hardening Handbook</title><style>
 :root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -20,6 +20,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -65,13 +66,14 @@ Check the list. If <strong>any one</strong> is true, you're here — no matter h
 <p>"It's just a side project / I barely have any users / it's basically a hobby" does <strong>not</strong> lower this. What's at stake when it breaks sets the floor — not how busy it is.</p>
 </div>
 <p><strong>The fear this kills:</strong> <em>"It'll break with real people on it — someone loses money or data, or gets stranded — and I won't even know."</em></p>
-<p>Three tools. They need Gate 1 underneath them first.</p>
-<p class="taphint">Tap a skill's name to open its own page — each has a short 20-second video.</p>
+<p>Three skills. They need Gate 1 underneath them first.</p>
+<p class="taphint">Tap a skill's name to open its own page; each has a short 20-second video.</p>
 
 <h2 id="qa-harness-set-up-your-safety-checks"><a href="skill-qa-harness.html"><code>/qa-harness</code></a> — set up your safety checks</h2>
-<p>Turns each must-not-break flow you care about (<em>log in, list an item, buy, pay…</em>) into a check that's been <strong>proven to go red</strong> when it breaks. You watch it break on purpose once, then it runs by itself on every change. <em>"The buy button charges a card"</em> stops being something you click through by hand and hope.</p>
+<p>Turns each must-not-break flow you care about (<em>log in, list an item, buy, pay…</em>) into a check that's been proven to go <strong>red</strong> when it breaks. You watch it catch a break made on purpose, once. After that it runs by itself on every change. <em>"The buy button charges a card"</em> stops being something you click through by hand and hope.</p>
 <h2 id="go-live-check-the-launch-readiness-audit"><a href="skill-go-live-check.html"><code>/go-live-check</code></a> — the launch-readiness audit</h2>
-<p>A blunt <strong>go / no-go</strong> before you let strangers and real money in. It stands up the nets — an error alert, an "is it down?" alert, a wide-open-database check, transaction checks, an email that actually arrives — and <strong>makes each one fire so you see it catch the failure</strong> on your own phone. Re-run it every few months, because monitors quietly rot.</p>
+<p>A blunt <strong>go / no-go</strong> before you let strangers and real money in. It sets up your safety nets, then makes each one fail on purpose so you see it catch the failure. Re-run it every few months, because monitors quietly rot.</p>
 <h2 id="emergency-plan-the-2-am-plan"><a href="skill-emergency-plan.html"><code>/emergency-plan</code></a> — the 2 a.m. plan</h2>
-<p>A one-page card you keep on your phone for the night something breaks: <em>is it just me or everyone? how do I get back to working? what do I tell my users? who do I call?</em> — plus a way back you've <strong>watched work</strong>, and an alarm wired to your phone. So you're never improvising in a panic, and the AI you reach for at 2 a.m. stays a careful reader instead of making it worse.</p>
-<p><a href="gate-3.html">Next: <strong>Gate 3 — run it like a real thing</strong> &rarr;</a></p><div class="pagenav"><a href="gate-1.html">&larr; Gate 1</a><span class="spacer"></span><a href="gate-3.html">Gate 3 &rarr;</a></div></main></body></html>
+<p>A one-page card you keep on your phone for the night something breaks: <em>is it just me or everyone? how do I get back to working? what do I tell my users? who do I call?</em> Then, in the same sitting if you can (bookable for later if not), a way back you've watched work and an alarm wired to your phone. The plan exists before the panic does. And your 2 a.m. AI gets standing, written orders: read and report on the tested path, don't improvise fixes.</p>
+<p>That's Gate 2 — strangers and real money can arrive, and if something breaks, you'll know before they tell you.</p>
+<p><a href="gate-3.html">Next: <strong>Gate 3 — Run it like a real thing</strong> &rarr;</a></p><div class="pagenav"><a href="gate-1.html">&larr; Gate 1</a><span class="spacer"></span><a href="gate-3.html">Gate 3 &rarr;</a></div></main></body></html>

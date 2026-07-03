@@ -11,10 +11,10 @@ Your browser can't play this. <a href="videos/release.mp4">Download the video</a
 
 ## What it does
 
-- **Catches your parked feature up** to your live app.
-- You **watch your safety checks go green** — proof nothing important broke.
-- On your okay, it **flips the feature on** — the real go-live, because it was held until now.
-- Saves a **bookmark** you can jump back to, and writes the plain **what-changed notes.**
+- Catches your parked feature up to your live app.
+- You watch your safety checks go green: proof nothing important broke.
+- On your okay, it flips the feature on. This is the real go-live, because the feature stayed parked until now.
+- Saves a bookmark you can jump back to, and writes the plain what-changed notes.
 
 If a check goes **red**, it stops cold and refuses to bless the version — that's the seatbelt winning.
 
@@ -24,12 +24,12 @@ On each release date, or whenever a parked feature is ready.
 
 ## When to stop or skip
 
-**Stop if your app isn't live to real strangers yet** — there's nothing to "release" to; just ship it with [`/ship-change`](skill-ship-change.html). A red check stops the release until you fix it.
+Stop if your app isn't live to real strangers yet: there's nothing to "release" to; just ship it with [`/ship-change`](skill-ship-change.html). A red check stops the release until you fix it.
 
-## Before this, you need
+## What you need first
 
 [`/safety-net`](skill-safety-net.html), [`/qa-harness`](skill-qa-harness.html) (the checks *are* the seatbelts), and [`/ship-change`](skill-ship-change.html).
 
-## After this — do this skill
+## What's next
 
-**[`/handoff`](skill-handoff.html)** — when you want someone else (or future-you) to be able to run it without you.
+**[`/handoff`](skill-handoff.html)**: when you want someone else (or future-you) to be able to run it without you.

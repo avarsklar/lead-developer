@@ -11,22 +11,24 @@ Your browser can't play this. <a href="videos/qa-harness.mp4">Download the video
 
 ## What it does
 
-- You **name a flow that must never break** — *log in, buy, pay…* — in plain English.
-- The AI **breaks it on purpose, once**, so you watch the check go **red**.
-- After that, the check **runs by itself on every change**, inside your `/ship-change` loop. You never touch test code.
+- You name a flow that must never break — *log in, buy, pay…* — in plain English.
+- The AI breaks it on purpose, once, so you watch the check go **red**.
+- After that, the check runs by itself on every change, inside your `/ship-change` loop. The AI writes and maintains the test code; you name the flow and watch the proof.
+
+<!-- ✍️ AVA (optional): swap the generic examples above (log in, buy, pay) for the real first flow you protected on your own app, in your words. Real specifics read human. -->
 
 ## When to run it
 
-When you're tired of clicking through your app by hand after every change, or you're hardening for real traffic.
+When you're tired of clicking through your app by hand after every change, or you're hardening for real traffic. Plan a real sit-down session the first time: most flows take a few minutes each, but the buy-button/checkout flow is honest work and takes about an hour on its own. Re-runs are short.
 
 ## When to stop or skip
 
-Set up **per flow** — re-prove a check only when that flow itself changes. It drives a real web browser, so it fits web apps; **phone apps aren't covered yet**.
+Set up per flow; re-prove a check only when that flow itself changes. It drives a real web browser, so it fits web apps; phone apps aren't covered yet.
 
-## Before this, you need
+## What you need first
 
-[`/ship-change`](skill-ship-change.html) — it provides your must-not-break list and the private sandbox.
+[`/ship-change`](skill-ship-change.html), which provides your must-not-break list and the private copy the checks run on.
 
-## After this — do this skill
+## What's next
 
-**[`/go-live-check`](skill-go-live-check.html)** — prove your nets actually catch real failures before you let strangers in.
+**[`/go-live-check`](skill-go-live-check.html)**: prove your nets actually catch real failures before you let strangers in.

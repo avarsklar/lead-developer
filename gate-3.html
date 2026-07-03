@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gate 3 — Scared to Touch It</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gate 3 — Lead Developer Hardening Handbook</title><style>
 :root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -20,6 +20,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -53,24 +54,23 @@ figure.fig figcaption{font-size:13px;color:#8a8a8a;text-align:center;margin-top:
 .pagenav a{color:#4a6fa5;text-decoration:none;font-weight:600}
 .pagenav .spacer{flex:1}
 @media (max-width:520px){main{padding:6px 16px 48px}.topnav a{padding:5px 7px}h1{font-size:24px}}
-</style></head><body class="gate3"><nav class="topnav"><a href="index.html">Start</a><span class="sep">·</span><a href="gate-1.html">Gate 1</a><span class="sep">·</span><a href="gate-2.html">Gate 2</a><span class="sep">·</span><a href="gate-3.html" class="here">Gate 3</a><span class="sep">·</span><a href="everything.html">Everything</a><span class="sep">·</span><a href="https://github.com/avarsklar/lead-developer-skills" class="get" target="_blank" rel="noopener">Get the skills ↗</a></nav><main><h1 id="gate-3-run-it-like-a-real-thing-and-hand-it-off">Gate 3 — Run it like a real thing (and hand it off)</h1>
+</style></head><body class="gate3"><nav class="topnav"><a href="index.html">Start</a><span class="sep">·</span><a href="gate-1.html">Gate 1</a><span class="sep">·</span><a href="gate-2.html">Gate 2</a><span class="sep">·</span><a href="gate-3.html" class="here">Gate 3</a><span class="sep">·</span><a href="everything.html">Everything</a><span class="sep">·</span><a href="https://github.com/avarsklar/lead-developer-skills" class="get" target="_blank" rel="noopener">Get the skills ↗</a></nav><main><h1 id="gate-3-run-it-like-a-real-thing">Gate 3 — Run it like a real thing</h1>
 <div class="gatecheck g3">
 <p><span class="q">Are you here yet?</span>
-You've gone live (Gate 2 is behind you), and your app has turned into <strong>a real, ongoing thing</strong> — not a toy anymore. You're <strong>adding to it over time</strong>, real people lean on it, and it needs <em>managing</em>, not just keeping alive.</p>
-<p>You're here if you're <strong>growing it</strong> and it's become a genuine operation that needs help running — or if the thought <em>"what happens to this if I step away?"</em> has started to nag. If it's still a finished little thing you only tinker with, you can happily skip this gate.</p>
+You've gone live, ideally with Gate 2's nets under you, and you're still adding to it: real people lean on it, and keeping it alive is no longer the whole job. If the thought <em>"what happens to this if I step away?"</em> has started to nag, you're here. If it's a finished little thing you only tinker with, you can happily skip this gate.</p>
 </div>
 <p><strong>The fear this kills:</strong> <em>"I'm chained to this thing — I can't change it calmly now that it's live, and I can't hand it off."</em></p>
-<p>Three tools — for shipping forever without being chained to it.</p>
-<p class="taphint">Tap a skill's name to open its own page — each has a short 20-second video.</p>
+<p>Three skills, for shipping forever without being chained to it.</p>
+<p class="taphint">Tap a skill's name to open its own page; each has a short 20-second video.</p>
 
 <h2 id="release-foundation-run-once-build-your-release-calendar"><a href="skill-release-foundation.html"><code>/release-foundation</code></a> — run once: build your release calendar</h2>
-<p>Now that you can change your app safely, you stop shipping every new feature the second it's done. You pick how often you put features out (weekly / every 2 weeks / monthly), and it builds — and <strong>shows you</strong> — a calendar of which feature goes out on which date. A finished feature waits in a <em>holding pen</em> until its day. The rule that ends the panic: if a feature isn't ready by its date, it just catches the next one. No all-nighter.</p>
+<p>Now that you can change your app safely, you stop shipping every feature the second it's done. You pick how often features go out (weekly / every 2 weeks / monthly), and it builds — and shows you — a calendar of which feature goes out on which date. A finished feature stays parked until its day. And the rule that ends the panic: a feature that isn't ready by its date just catches the next release. No all-nighter.</p>
 <h2 id="release-run-on-each-release-date"><a href="skill-release.html"><code>/release</code></a> — run on each release date</h2>
-<p>Release day, seatbelts on: it takes the feature you parked, makes sure it still works with your live app, you <strong>watch the checks go green</strong>, and then — on your okay — it goes live. Plus a bookmark you can jump back to, and a plain note of what changed. If a check goes <strong>red</strong>, it stops cold and refuses to bless the version — that's the seatbelt winning, not failing.</p>
+<p>Release day, seatbelts on: it takes the feature you parked, makes sure it still works with your live app, you watch the checks go green, and then, on your okay, it goes live. Plus a bookmark you can jump back to, and a plain note of what changed. If a check goes <strong>red</strong>, it stops cold and refuses to bless the version — that's the check doing its job.</p>
 <h2 id="handoff-run-when-you-step-away"><a href="skill-handoff.html"><code>/handoff</code></a> — run when you step away</h2>
-<p>Writes down where everything lives — every account, who owns it, <strong>where</strong> each login is (never the password itself) — so someone else, or future-you, could keep it running without ever calling you. Then it <strong>proves</strong> the packet by having a memory-less reader run one real task from it alone, patching every gap until it carries someone who knows nothing. You stop being the single point of failure. It touches nothing live and never locks you out.</p>
+<p>Writes down where everything lives: every account, who owns it, where each login is kept (never the password itself). Then it proves a stranger could run the app from the packet alone. You stop being the single point of failure, and it never locks you out.</p>
 <div class="cal stop">
 <p><span class="lbl">When to stop</span>
-Don't set up a release calendar (<code>/release-foundation</code>) or run release day (<code>/release</code>) unless your app is <strong>actually live to real strangers</strong> — random people, not just you and a few friends testing. A holding pen and a calendar solve a problem you only <em>have</em> once real people depend on what you put out. If it isn't public yet, skip the schedule and just keep shipping freely with <strong><code>/ship-change</code></strong>. Both tools now check this and turn you around warmly if it isn't time.</p>
+Don't set up a release calendar (<code>/release-foundation</code>) or run release day (<code>/release</code>) unless your app is actually live to real strangers, meaning random people, not just you and a few friends. Until then, skip the schedule and keep shipping freely with <strong><code>/ship-change</code></strong>. (Both skills check this and will turn you around if it isn't time.)</p>
 </div>
 <p><a href="everything.html">See <strong>everything on one page</strong> &rarr;</a></p><div class="pagenav"><a href="gate-2.html">&larr; Gate 2</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>

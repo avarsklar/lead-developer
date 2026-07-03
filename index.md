@@ -1,23 +1,25 @@
+<p class="kicker">Lead Developer Hardening Handbook</p>
+
 # Scared to touch your own app?
 
 <p class="lead">You built something real with AI. It works. People use it — maybe pay for it. And now you're scared to change a single thing, because you might break it.</p>
 
-That fear isn't silly, and it isn't a sign you're a fraud. It means you crossed from *making something work once* into *running something real* — and nobody handed you the map for that part.
+That fear is normal. It's what crossing from *making something work once* into *running something real* feels like, and nobody handed you the map for that part.
+
+<!-- ✍️ AVA (1 of 4): 2–3 sentences in your own words go right here, between the fear and "This is the map." You were that person — name your app, ground the fear in a real week. Write it the way you'd say it out loud. -->
 
 This is the map. It's short on purpose.
 
 <div class="cal do" markdown="1">
 <span class="lbl">Start here</span>
-Not sure where you stand? Open your project and run **`/readiness-check`** — five minutes, four easy questions. It reads your app and tells you **which gate you're at** and **the one next move.** Everything below is just the *why*; this is the *do*.
+Not sure where you stand? Open your app's folder in Claude Code and run **[`/readiness-check`](skill-readiness-check.html)** — five minutes, four shrug-friendly questions, and it only looks; it never changes anything. It tells you which gate you're at and your next move. Don't have the skills yet? [Grab them first](#get); it takes about two minutes.
 </div>
-
-Here's the whole idea, then where each piece fits.
 
 ## The one big idea
 
-Every fear you have about your app has a **name**, and every named fear has a **smallest possible fix** — not a course, not a rebuild, not a computer-science degree. You never do all of it at once. You add **one safety net at a time**, and only when you actually feel the fear it removes.
+Every fear you have about your app has a name, and every named fear has a smallest possible fix — not a course, not a rebuild, not a computer-science degree. You add one safety net at a time, and only when you actually feel the fear it removes.
 
-We measure safety in **gates** — levels of how much of a net is under you. A gate is *not* a grade, a size, or a measure of success. It only answers one question: *how protected are you if something goes wrong?*
+Safety here is measured in **gates**: levels of how much net is under you. A gate answers one question: *how protected are you if something goes wrong?*
 
 ## Two things people confuse
 
@@ -55,14 +57,12 @@ There are two completely separate things, and your anxiety lives on the one nobo
   <text x="370" y="320" font-size="12" fill="#a23b2e">that could fall over,</text>
   <text x="370" y="336" font-size="12" fill="#a23b2e">no one watching.</text>
 </svg>
-<figcaption>Your anxiety lives on the vertical axis. The dangerous corner is lots of people on something fragile — exactly what happens when you build something good with AI, fast.</figcaption>
+<figcaption>Your anxiety lives on the vertical axis. The dangerous corner is lots of people on something fragile. That's exactly what happens when you build something good with AI, fast.</figcaption>
 </figure>
 
 ## The trick that makes this safe to do with AI
 
-A naive prompt — *"AI, fix my checkout"* — behaves like an eager junior: it edits your **live** app directly and hopes it worked. That really *is* a leap of faith, and being scared of it is correct.
-
-The whole approach here is to wrap the AI in the rails a careful senior would never skip:
+A naive prompt — *"AI, fix my checkout"* — behaves like an eager junior, and being scared of that is correct. The whole approach here is to wrap the same AI in the rails a careful senior would never skip:
 
 <figure class="fig">
 <svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
@@ -89,10 +89,10 @@ The whole approach here is to wrap the AI in the rails a careful senior would ne
   <text x="505" y="296" text-anchor="middle" font-size="12" fill="#888">A one-move way back stays ready the whole time.</text>
   <text x="505" y="316" text-anchor="middle" font-size="12.5" font-weight="700" fill="#39623f">= a guided procedure with rails</text>
 </svg>
-<figcaption>Same AI, same prompt. The only difference is the procedure around it — and you are the one who approves each step.</figcaption>
+<figcaption>Same AI, same prompt. The only difference is the procedure around it.</figcaption>
 </figure>
 
-You don't become a developer. You become **the person who approves the gates** — and you're already qualified for that, because you know what your app is supposed to do and you can look and tell if it's doing it.
+You don't become a developer. You become the person who gives the okay. You're already qualified for that, because you know what your app is supposed to do and you can look and tell if it's doing it.
 
 ## The whole climb
 
@@ -122,21 +122,23 @@ You don't become a developer. You become **the person who approves the gates** �
   <rect x="70" y="392" width="590" height="80" rx="8" fill="#f6f6f6" stroke="#dcdcdc"/>
   <rect x="70" y="392" width="7" height="80" rx="3" fill="#9aa0a6"/>
   <text x="92" y="418" font-size="15" font-weight="700" fill="#555">Gate 0 &#8212; Just shipped</text>
-  <text x="92" y="438" font-size="12.5" fill="#666">it works. that's real. no nets yet &#8212; the starting line everyone begins at</text>
+  <text x="92" y="438" font-size="12.5" fill="#666">it works. that's real. no nets yet &#8212; where everyone begins</text>
   <text x="92" y="460" font-size="11.5" fill="#9a9a9a">the front door &#8212; /readiness-check &#8212; tells you which gate you're at</text>
 </svg>
-<figcaption>Four levels. Most people need Gate 1 and stop there. You climb higher only when a higher gate's fear becomes <em>yours</em> — never to collect the whole set.</figcaption>
+<figcaption>Four gates, and the horizon above them. Most people need Gate 1 and stop there. You climb higher only when a higher gate's fear becomes <em>yours</em> — never to collect the whole set.</figcaption>
 </figure>
 
 ## Where to go from here
 
-Once `/readiness-check` tells you your gate, read that gate's page — each one starts by helping you check *are you even here yet?*
+Once `/readiness-check` tells you your gate, read that gate's page; each one starts by helping you check *are you even here yet?*
 
-[**Gate 1 — stop being scared to touch it**](gate-1.html) · [**Gate 2 — safe for real strangers**](gate-2.html) · [**Gate 3 — run it like a real thing**](gate-3.html)
+[**Gate 1 — Stop being scared to touch it**](gate-1.html) · [**Gate 2 — Safe for real strangers**](gate-2.html) · [**Gate 3 — Run it like a real thing**](gate-3.html)
 
 Or see [**everything on one page**](everything.html).
 
-<div class="cal plain" markdown="1">
+<!-- ✍️ AVA (2 of 4): a short "Who made this" block goes right here, above the Get-the-skills box. 2–4 first-person sentences: your name, that you built and run these on your own apps, and ONE concrete result (the drill that caught a real bug in your own rollback script, or the launch check that failed your own app and deserved to). A way to reach you (GitHub issues) makes a good last line. -->
+
+<div class="cal plain" markdown="1" id="get">
 <span class="lbl">Get the skills</span>
-The nine skills are free to download and run with your own AI. **[Get them on GitHub ↗](https://github.com/avarsklar/lead-developer-skills)** — clone or download, drop them into Claude Code, and run `/readiness-check`. Install steps are in the repo's README.
+The nine skills are free, and they run in **Claude Code**, the same kind of AI you already build with, pointed at the folder your app lives in. **[Get them on GitHub ↗](https://github.com/avarsklar/lead-developer-skills)**: click the green **Code** button, choose **Download ZIP** (no account needed), and follow the short install steps in the README. Then run `/readiness-check`.
 </div>

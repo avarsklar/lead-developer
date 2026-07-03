@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/emergency-plan — Scared to Touch It</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>/emergency-plan — Lead Developer Hardening Handbook</title><style>
 :root{--ink:#222;--muted:#666;--line:#e0e0e0;--g1:#5a9367;--g2:#c98a2b;--g3:#4a6fa5}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -20,6 +20,7 @@ h2 a:hover{border-bottom-color:currentColor}
 .gate1 h2 a{color:var(--g1)} .gate2 h2 a{color:var(--g2)} .gate3 h2 a{color:var(--g3)}
 .start h2 a{color:#444}
 .lead{font-size:17px;color:#444}
+.kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#4a6fa5;margin:20px 0 -8px}
 .taphint{font-size:13.5px;color:#8a8a8a;background:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:9px 13px;margin:4px 0 6px}
 code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-size:.92em;font-family:"SF Mono",Menlo,monospace}
 a{color:#4a6fa5}
@@ -63,16 +64,19 @@ Your browser can't play this. <a href="videos/emergency-plan.mp4">Download the v
 
 <p><strong>The fear it kills:</strong> <em>"One night it'll break, I'll be alone, I won't know what to do — and the only tool I have is the same AI that might make it worse."</em></p>
 <h2 id="what-it-does">What it does</h2>
-<p>It runs in <strong>two parts</strong>, and says so up front.</p>
+<p>It runs in two parts.</p>
 <ul>
-<li><strong>Part 1</strong> (15–20 min, touches nothing live): a <strong>one-page card</strong> on every device — <em>is it just me or everyone? how do I get back to working? what do I tell my users? who do I call?</em> — plus a <strong>tested leash</strong> on your 2 a.m. AI so it stays a careful reader.</li>
-<li><strong>Part 2</strong> (recommended now, bookable for later): rehearses the <strong>way back</strong> for real, builds an <strong>in-app banner</strong> to tell users, and wires the <strong>"your app is down" alarm</strong> to your phone.</li>
+<li><strong>Part 1</strong> (15–20 minutes, touches nothing live): a one-page card on every device — <em>is it just me or everyone? how do I get back to working? what do I tell my users? who do I call?</em></li>
+<li>Part 1 also writes hard, standing rules for your 2 a.m. AI, so it stays a careful reader on your already-tested way back instead of an improviser.</li>
+<li><strong>Part 2</strong> (45–90 minutes; recommended now, bookable for later): rehearses the way back for real, builds an in-app banner to tell users, and wires the "your app is down" alarm to your phone.</li>
 </ul>
+<!-- ✍️ AVA (4 of 4): 2–3 sentences here, first person — your first rehearsal caught a real bug in your own rollback script, the way back you'd been counting on; you fixed it and re-ran the drill until it passed. Your words. -->
+
 <h2 id="when-to-run-it">When to run it</h2>
 <p>When you're about to depend on your app being up, or you're scared of the night it breaks. It also fires live if you type something like <em>"it's down."</em></p>
 <h2 id="when-to-stop-or-skip">When to stop or skip</h2>
-<p>Skip if nobody really depends on it being up yet. Re-check the card and alarm every few months — they rot too.</p>
-<h2 id="before-this-you-need">Before this, you need</h2>
-<p><a href="skill-safety-net.html"><code>/safety-net</code></a> — a <strong>tested way back</strong> is required. Part 2's drill + banner use <a href="skill-ship-change.html"><code>/ship-change</code></a>'s sandbox.</p>
-<h2 id="after-this-do-this-skill">After this — do this skill</h2>
-<p>That's <strong>Gate 2</strong> — you're safe for real strangers. If you're growing this into a real, ongoing thing, climb to Gate 3: <strong><a href="skill-release-foundation.html"><code>/release-foundation</code></a></strong>.</p><div class="pagenav"><a href="gate-2.html">&larr; Back to Gate 2</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>
+<p>Skip if nobody really depends on it being up yet. Re-check the card and alarm every few months. They rot too.</p>
+<h2 id="what-you-need-first">What you need first</h2>
+<p><a href="skill-safety-net.html"><code>/safety-net</code></a>: a tested way back is required. Part 2's drill and banner use <a href="skill-ship-change.html"><code>/ship-change</code></a>'s private copy.</p>
+<h2 id="whats-next">What's next</h2>
+<p>That's Gate 2 — you're safe for real strangers. If you're growing this into a real, ongoing thing, climb to Gate 3: <strong><a href="skill-release-foundation.html"><code>/release-foundation</code></a></strong>.</p><div class="pagenav"><a href="gate-2.html">&larr; Back to Gate 2</a><span class="spacer"></span><a href="everything.html">Everything &rarr;</a></div></main></body></html>

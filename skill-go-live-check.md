@@ -11,22 +11,24 @@ Your browser can't play this. <a href="videos/go-live-check.mp4">Download the vi
 
 ## What it does
 
-- Stands up the nets — an **error alert**, an **"is it down?" alert**, a wide-open-database check, transaction checks, an email that actually arrives.
-- **Makes each one fail on purpose** and you watch the alert **land on your own phone.**
-- Renders a blunt **go / no-go.**
+- Sets up the nets: an error alert, an "is it down?" alert, a check that your database isn't readable by strangers, a check that strangers can't get into accounts that aren't theirs, checks that the money moved matches what was ordered, and proof that the emails your app sends (receipts, password resets) actually arrive.
+- Makes each one fail on purpose, so you see the net catch it: the alert landing on your phone, the stranger's read getting blocked, the test email arriving in your inbox.
+- Renders a blunt **go / no-go**.
+
+<!-- ✍️ AVA (3 of 4): 2 sentences here, first person — the first time you ran this on a real app, the error monitor looked set up but was silently catching nothing in production; the check made it fail, nothing arrived, and the verdict was NO-GO. Say it your way. It's the strongest proof on this page. -->
 
 ## When to run it
 
-Before you launch to the public or push for growth — and **every few months after**, because monitors quietly rot.
+Before you launch to the public or push for growth; figure 30–45 minutes the first time, shorter on re-runs. Then every few months after: a monitor you set up in March can be quietly dead by June.
 
 ## When to stop or skip
 
-It gates by *verdict*, not by force — a **FAIL** means "not yet," and the FAIL itself becomes your next move. Re-run after you fix it.
+A **no-go** doesn't lock you out; it means "not yet." Whatever failed is your next job: fix it, then re-run.
 
-## Before this, you need
+## What you need first
 
-[`/safety-net`](skill-safety-net.html). The money and sign-in checks also lean on [`/ship-change`](skill-ship-change.html)'s private sandbox.
+[`/safety-net`](skill-safety-net.html). The money and sign-in checks also lean on [`/ship-change`](skill-ship-change.html)'s private copy.
 
-## After this — do this skill
+## What's next
 
-**[`/emergency-plan`](skill-emergency-plan.html)** — your calm plan for the night something breaks anyway. That's the last rung of the go-live gate.
+**[`/emergency-plan`](skill-emergency-plan.html)**: your calm plan for the night something breaks anyway. That's the last piece of Gate 2.

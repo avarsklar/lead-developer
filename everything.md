@@ -1,13 +1,13 @@
 # Everything on one page
 
-The whole road, the three lanes, the full table, and what runs on a schedule — all here, so you never have to hunt.
+The whole climb, the three lanes, the full table, and what runs on a schedule — all here, so you never have to hunt.
 
 <div class="cal plain" markdown="1">
 <span class="lbl">Get the skills</span>
-Free to download and run with your own AI: **[the nine skills on GitHub ↗](https://github.com/avarsklar/lead-developer-skills)**. Clone or download, drop them into Claude Code, and run `/readiness-check`.
+Free, and they run in **Claude Code**. **[Get the nine skills on GitHub ↗](https://github.com/avarsklar/lead-developer-skills)**: click the green **Code** button, choose **Download ZIP**, follow the short README install, then run `/readiness-check`.
 </div>
 
-## The road
+## The map
 
 <figure class="fig">
 <svg viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
@@ -18,7 +18,7 @@ Free to download and run with your own AI: **[the nine skills on GitHub ↗](htt
   </defs>
   <rect x="120" y="18" width="440" height="48" rx="8" fill="#f4f5f6" stroke="#cfcfcf"/>
   <text x="340" y="40" text-anchor="middle" font-size="13.5" font-weight="700" fill="#444">START HERE &#8212; /readiness-check</text>
-  <text x="340" y="57" text-anchor="middle" font-size="11.5" fill="#777">tells you your gate &amp; the one next move</text>
+  <text x="340" y="57" text-anchor="middle" font-size="11.5" fill="#777">tells you your gate &amp; your next move</text>
   <line x1="340" y1="68" x2="340" y2="88" stroke="#aaa" stroke-width="1.5" marker-end="url(#dn)"/>
   <rect x="40" y="90" width="600" height="96" rx="9" fill="#f5faf6" stroke="#cfe4d3"/>
   <text x="58" y="114" font-size="13.5" font-weight="700" fill="#39623f">GATE 1 &#183; for everyone</text>
@@ -54,15 +54,14 @@ Free to download and run with your own AI: **[the nine skills on GitHub ↗](htt
   <rect x="58" y="434" width="564" height="44" rx="7" fill="#fff" stroke="#bcc9e3"/>
   <text x="340" y="455" text-anchor="middle" font-size="12.5" font-weight="600" fill="#33486b">/handoff</text>
   <text x="340" y="471" text-anchor="middle" font-size="11" fill="#7d88a5">when you step away &#8212; so you're never the single point of failure</text>
-  <text x="340" y="516" text-anchor="middle" font-size="12" fill="#999">Most builders live at Gate 1. You climb only when a gate's fear is actually yours &#8212;</text>
-  <text x="340" y="534" text-anchor="middle" font-size="12" fill="#999">never to collect the whole set.</text>
+  <text x="340" y="524" text-anchor="middle" font-size="12" fill="#999">Most builders live at Gate 1 &#8212; you climb only when a gate's fear is actually yours.</text>
 </svg>
-<figcaption>Front door to handoff. Every arrow is "this needs the one before it."</figcaption>
+<figcaption>Front door to handoff. Each arrow means "do this one first."</figcaption>
 </figure>
 
 ## Where does this kind of work go?
 
-Once you're growing, the most common confusion is *"where does this even go?"* Three lanes, three speeds — that split is exactly why there are separate tools:
+Once you're growing, the most common confusion is *"where does this even go?"* Three lanes, three speeds — that split is exactly why there are separate skills:
 
 <figure class="fig">
 <svg viewBox="0 0 680 290" xmlns="http://www.w3.org/2000/svg" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
@@ -77,7 +76,7 @@ Once you're growing, the most common confusion is *"where does this even go?"* T
   <rect x="20" y="106" width="6" height="76" rx="3" fill="#4a6fa5"/>
   <text x="44" y="134" font-size="13" font-weight="700" fill="#33486b">A brand-new feature</text>
   <text x="44" y="154" font-size="11.5" fill="#5e6e8c">a new thing you're adding for your users</text>
-  <text x="44" y="171" font-size="11" fill="#8190ab">&#9655; rides a date &#8212; held in the pen until release day</text>
+  <text x="44" y="171" font-size="11" fill="#8190ab">&#9655; gets a date &#8212; stays parked until release day</text>
   <rect x="396" y="124" width="244" height="40" rx="7" fill="#fff" stroke="#bcc9e3"/>
   <text x="518" y="143" text-anchor="middle" font-size="11.5" font-weight="600" fill="#33486b">/release-foundation sets it up</text>
   <text x="518" y="158" text-anchor="middle" font-size="11" fill="#7d88a5">/release puts it out</text>
@@ -92,23 +91,23 @@ Once you're growing, the most common confusion is *"where does this even go?"* T
 <figcaption>Features wait on a schedule. Fixes don't. Emergencies break glass.</figcaption>
 </figure>
 
-## Every tool — when to run it, when to stop
+## Every skill — when to run it, when to stop
 
-| Tool | What it's for (plain) | Run it… | When to stop / skip | Needs first |
+| Skill | What it's for (plain) | Run it… | When to stop / skip | Needs first |
 |---|---|---|---|---|
-| [**/readiness-check**](skill-readiness-check.html) | Tells you your gate and the one next move | First — and any time you're unsure where you stand | It only points; it never fixes | — |
-| [**/safety-net**](skill-safety-net.html) | A floor you can't fall through: restore point, secrets cleaned up, backups that really restore | Once, before your first real change | One-time — don't redo finished steps; a plain static site skips backups | — |
+| [**/readiness-check**](skill-readiness-check.html) | Tells you your gate and your next move | First — and any time you're unsure where you stand | Never worth skipping (five minutes); it only points, it never fixes | — |
+| [**/safety-net**](skill-safety-net.html) | A floor you can't fall through: restore point, secrets cleaned up into a password manager, backups that really restore | Once, before your first real change | One-time — don't redo finished steps; an app that stores nothing (no accounts, no orders) can skip backups | — |
 | [**/ship-change**](skill-ship-change.html) | The everyday safe-change loop: private copy first, live only on your okay | **Every single time** you change anything | Never "too small" to use, and never skipped | /safety-net |
 | [**/qa-harness**](skill-qa-harness.html) | Turns a must-not-break flow into a check proven to go red | When you want "how do I know nothing broke" handled | Per-flow setup; re-prove a check only when that flow changes. Not for phone apps yet | /ship-change |
-| [**/go-live-check**](skill-go-live-check.html) | Proves your nets catch real failures before strangers / money arrive | Before you launch to the public or push for growth | Re-run every few months (monitors rot); a FAIL means "not yet" | /safety-net |
-| [**/emergency-plan**](skill-emergency-plan.html) | The 2 a.m. card, a proven way back, and an alarm | When you're about to depend on uptime | Skip if nobody depends on it being up yet; re-check every few months | /safety-net |
-| [**/release-foundation**](skill-release-foundation.html) | Once: your release calendar + holding pen (and it shows you the calendar) | Once, when you're growing it into a real, ongoing thing | **Stop if it's not live to real strangers**, or if it's a finished thing you just tinker with | /safety-net, /ship-change |
+| [**/go-live-check**](skill-go-live-check.html) | Proves your nets catch real failures before strangers / money arrive | Before you launch to the public or push for growth | Re-run every few months (monitors rot); a no-go means "not yet" | /safety-net (+ /ship-change for the money & sign-in checks) |
+| [**/emergency-plan**](skill-emergency-plan.html) | The 2 a.m. card, a proven way back, and an alarm | When you're about to depend on uptime | Skip if nobody depends on it being up yet; re-check every few months | /safety-net (+ /ship-change for Part 2) |
+| [**/release-foundation**](skill-release-foundation.html) | Once: your release calendar, and the parking spot finished features wait in | Once, when you're growing it into a real, ongoing thing | **Stop if it's not live to real strangers**, or if it's a finished thing you just tinker with | /safety-net, /ship-change |
 | [**/release**](skill-release.html) | Release day: put a parked feature live, seatbelts on, bookmark + notes | On each release date | **Stop if it's not live to real strangers.** A red check stops it cold | /safety-net, /qa-harness, /ship-change |
-| [**/handoff**](skill-handoff.html) | Prove someone else could run it without you | When stepping away, or for peace of mind | The clean-break "real handover" opens only when you say so; refresh every few months | the whole ladder behind it |
+| [**/handoff**](skill-handoff.html) | Prove someone else could run it without you | When stepping away, or for peace of mind | The clean-break "real handover" opens only when you say so; refresh every few months | the whole climb behind it |
 
 ## What runs on its own, and what taps you on the shoulder
 
-For a non-developer, "scheduled" means two different things — keep them apart:
+For a non-developer, "scheduled" means two different things. Keep them apart:
 
 <figure class="fig">
 <svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
@@ -131,21 +130,30 @@ For a non-developer, "scheduled" means two different things — keep them apart:
   <text x="505" y="163" text-anchor="middle" font-size="11.5" fill="#9a7636">YOU run a short skill,</text>
   <text x="505" y="180" text-anchor="middle" font-size="11.5" fill="#9a7636">then you're done</text>
 </svg>
+<figcaption>Two different kinds of "scheduled" — machines that work alone, and reminders that fetch you.</figcaption>
 </figure>
 
-**Runs on its own** (set up once, then automatic): nightly **backups** + the **secret-leak guard** (`/safety-net`); your **must-not-break checks**, on every change (`/qa-harness`); the **"errored"** and **"it's down"** alarms to your phone (`/go-live-check` — the down-alarm is *one* shared alarm with `/emergency-plan`, not two); a quiet **renewal/expiry watch** (`/handoff`).
+**Runs on its own** (set up once, then automatic):
 
-**Taps you on the shoulder** (a reminder; you run a short skill): **release day** &rarr; run `/release`; and a gentle **"re-check, monitors rot"** every few months &rarr; re-run `/go-live-check`, `/emergency-plan`, `/handoff`.
+- nightly backups, and a guard that blocks a secret from ever being committed into your code again (`/safety-net`)
+- your must-not-break checks, on every change (`/qa-harness`)
+- the "errored" and "is it down?" alarms to your phone (`/go-live-check` — one down-alarm, shared with `/emergency-plan`)
+- a quiet watch on the account time-bombs, like an expiring card or a domain up for renewal (`/handoff`)
 
-**The rest you run only when you need them:** `/readiness-check`, `/ship-change`, the one-time setups, and `/emergency-plan` in an actual emergency.
+**Taps you on the shoulder** (a reminder shows up; you run a short skill):
+
+- release day &rarr; run `/release`
+- every few months, "re-check your nets — monitors rot" &rarr; re-run `/go-live-check`, `/emergency-plan`, `/handoff`
+
+Everything else you run only when you need it: `/readiness-check`, `/ship-change`, the one-time setups, and `/emergency-plan` in an actual emergency.
 
 <div class="cal plain" markdown="1">
 <span class="lbl">The one rule underneath all of it</span>
-No tool ever pushes a change to your live app on a timer. **A human always approves the moments that matter.**
+No skill ever pushes a change to your live app on a timer. **A human always approves the moments that matter.**
 </div>
 
-## Not built yet (named honestly)
+## Not built yet
 
-What this will **cost** to run, whether you should become a **real business**, an **admin dashboard** (who signed up, what's selling), and **phone-app** checks — these don't have tools yet, and this guide won't fake answers it can't stand behind. They're coming; they're marked, not buried.
+What this will cost to run, whether you should become a real business, an admin dashboard (who signed up, what's selling), and phone-app checks — these don't have skills yet. They're named here so you know exactly where the edge of this guide is. They're coming.
 
 [&larr; Back to the Start](index.html)

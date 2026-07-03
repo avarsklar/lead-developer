@@ -1,0 +1,334 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Skills — Lead Developer (Drafts)</title><style>body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 780px; margin: 40px auto; padding: 0 24px; line-height: 1.6; color: #222; }
+h1 { font-size: 28px; border-bottom: 2px solid #333; padding-bottom: 8px; margin-top: 32px; }
+h2 { font-size: 22px; margin-top: 28px; color: #1a1a1a; }
+h3 { font-size: 18px; margin-top: 22px; color: #2a2a2a; }
+h4 { font-size: 15px; }
+code { background:#f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.92em; font-family: "SF Mono", Menlo, monospace; }
+pre { background:#1e1e1e; color:#eee; padding: 14px; border-radius: 6px; overflow-x: auto; font-size: 12px; line-height: 1.4; }
+table { border-collapse: collapse; margin: 16px 0; width: 100%; font-size: 14px; }
+th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; vertical-align: top; }
+th { background: #f0f0f0; }
+hr { border: none; border-top: 1px solid #ddd; margin: 28px 0; }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+strong { color: #000; }
+em { color: #666; }</style></head><body>
+<h1 id="skills-working-drafts">Skills — Working Drafts</h1>
+<p>A scaffold for the virtual-lead-developer skill set. Each skill below has the one-liner from the Game Plan, then a set of empty slots to fill in as we brainstorm. The goal is to walk through them one at a time and pin down: who runs it, when, what it asks for, what it actually does step-by-step, what it outputs, and what's still open.</p>
+<p><strong>Status:</strong> strawman v1 — names + jobs only. Everything below the one-liner is a placeholder to brainstorm.</p>
+<p><strong>How to use this doc:</strong> pick one skill, fill in the slots together, leave the rest as scaffolding until we get to them. Don't try to design all of them at once — that's the same anti-pattern the Ladder warns against.</p>
+<hr />
+<h2 id="the-diagnostic-entry-point">The diagnostic (entry point)</h2>
+<h3 id="readiness-check"><code>/readiness-check</code></h3>
+<p><strong>One-liner.</strong> Point it at your app; it tells you which gate you're at and what's missing. No more than three next moves — the discipline is one net at a time.</p>
+<p><strong>Who runs it.</strong> <em>TBD</em>
+<strong>When.</strong> <em>TBD</em>
+<strong>Inputs.</strong> <em>TBD</em> (URL? repo path? a Q&amp;A interview? all three?)
+<strong>What it does, step-by-step.</strong>
+1. <em>TBD</em>
+2. <em>TBD</em>
+3. <em>TBD</em></p>
+<p><strong>Output.</strong> <em>TBD</em> (gate verdict + top 3 missing nets + which skill to run first?)
+<strong>Open questions.</strong> <em>TBD</em></p>
+<hr />
+<h1 id="gate-1-make-it-robust-mvrp">Gate 1 — Make it robust (MVRP)</h1>
+<p><strong>Kills the fear:</strong> "If I touch it, I'll break it or lose my work."
+<strong>Earns you:</strong> the ability to change things fearlessly.</p>
+<h2 id="safety-net-drafted"><code>/safety-net</code> — DRAFTED</h2>
+<p><strong>One-liner.</strong> One-time setup: git workflow + a staging copy + an automated, restore-tested backup. The single move that gets you out of the danger zone — after it, every change is reversible and previewed.</p>
+<h3 id="what-the-builder-ends-up-with-the-mental-model">What the builder ends up with (the mental model)</h3>
+<p>After <code>/safety-net</code> runs, you always have <strong>two versions of your app</strong>, plus a backup layer under both:</p>
+<pre><code>        ┌─────────────────────┐
+        │  V2 (your sandbox)  │ ← you change things here first
+        └──────────┬──────────┘
+                   │ promote when you like it
+                   ▼
+        ┌─────────────────────┐
+        │  V1 (live, users)   │ ← safe from your changes
+        └──────────┬──────────┘
+                   │ nightly snapshot
+                   ▼
+        ┌─────────────────────┐
+        │  Backups + restore  │ ← safe from data disasters
+        └─────────────────────┘
+</code></pre>
+<ul>
+<li><strong>V1</strong> = the published version. The one your users see.</li>
+<li><strong>V2</strong> = the safe sandbox. Same shape as V1, separate URL. Where you change things before they go live.</li>
+<li><strong>Workflow:</strong> change V2 → look at it → like it → promote to V1. (This is what <code>/ship-change</code> runs.)</li>
+<li><strong>Backups</strong> = a separate safety net underneath both versions. V1/V2 protects you from <em>bad code changes</em>; backups protect you from <em>data disasters that have nothing to do with code</em> (user accidentally deletes their account, hack wipes a table, a migration corrupts data).</li>
+</ul>
+<p>Both layers belong in <code>/safety-net</code> because both fears live in Gate 1, but they protect against different failure modes — don't mistake "I have V2" for "my data is safe." It isn't, until backups + a tested restore exist too.</p>
+<h3 id="relationship-to-other-skills">Relationship to other skills</h3>
+<ul>
+<li><code>/safety-net</code> (this one) = <strong>sets up V1 and V2 + backups</strong>. Run once per project.</li>
+<li><code>/ship-change</code> = <strong>runs the V2 → V1 promotion ritual</strong>. Run every time you touch the app.</li>
+</ul>
+<p><code>/safety-net</code> builds the road. <code>/ship-change</code> is what you drive on it.</p>
+<p><strong>Who runs it.</strong> The builder (non-technical). The AI does the typing and the heavy lifting; the builder reads, confirms each step, and ends up understanding what's in place.</p>
+<p><strong>When.</strong> Once per project, before any real changes go live. Re-run only if the stack changes (e.g., you migrate hosts or databases).</p>
+<p><strong>Inputs.</strong> None upfront — the skill discovers everything in Step 0. The only assumption is <strong>git</strong> (and if it's not set up, Step 1 sets it up).</p>
+<p><strong>Design principles.</strong>
+- <strong>Guided checklist, not autonomous agent.</strong> Each step explains → does → confirms → moves on. The builder leaves knowing what's in place and able to operate it.
+- <strong>Stack-agnostic.</strong> Never assumes Vercel / Supabase / Next.js / anything. Discovers the user's stack first, then translates each generic action into specific commands for their tools.
+- <strong>Skip-what's-done.</strong> If git already exists, don't re-init. If backups already run, just verify them. Don't redo work.</p>
+<p><strong>What it does, step-by-step.</strong></p>
+<p><strong>Step 0 — Discover the stack.</strong>
+- Ask in plain English: "What's your frontend? Backend? Database? Host?" If the user doesn't know, inspect the repo and propose an answer: <em>"Looks like you're using Next.js, Supabase for the database, and Vercel for hosting — does that sound right?"</em>
+- Output of this step: a <code>stack.md</code> written into the project. Every later step (and every other skill) reads from it.</p>
+<p><strong>Step 1 — Git baseline.</strong>
+- If no git repo: init one.
+- If no remote: push to a private GitHub repo.
+- Tag the current commit as <code>known-good-v1</code> — this is the forever-rollback point.
+- Write a <code>.gitignore</code> that excludes <code>.env</code>, secrets, and platform junk.
+- Protect <code>main</code> so nothing can push to it directly (changes must come through a separate branch).</p>
+<p><strong>Step 2 — Secrets out of code.</strong>
+- Scan the repo for hardcoded API keys, tokens, passwords, connection strings.
+- For each one found, move it to an environment variable on the user's host (Vercel env vars UI, Netlify env vars, Cloudflare secrets, etc. — based on Step 0).
+- Confirm the app still runs after the move.</p>
+<p><strong>Step 3 — Staging environment.</strong>
+- Stand up a preview / staging deployment using whatever the user's host calls it (Vercel preview deploys, Netlify branch previews, Cloudflare Pages preview, etc.).
+- Verify staging works by deploying a trivial visible change to it (e.g., add a <code>STAGING</code> banner).</p>
+<p><strong>Step 4 — Sanitized clone for staging data.</strong>
+- Write a sanitization script that copies the production database and replaces sensitive fields with fake values: emails → <code>user_NN@example.com</code>, names → fake names from a list, payment info → removed, addresses → fake. (See Brainstorm.md → <em>Notes &amp; Learnings</em> for the why.)
+- Point staging at this sanitized clone instead of prod.
+- Schedule the script to refresh the clone (weekly is fine for v1).
+- Verify the clone has fake data, not real, before linking it to staging.</p>
+<p><strong>Step 5 — Automated backups.</strong>
+- Turn on scheduled backups on the user's database (Supabase has it built in; Firebase via export; self-hosted Postgres via <code>pg_dump</code> cron; etc.).
+- Verify backups are <strong>actually landing somewhere</strong>, not just "configured." Show the user the latest backup file.</p>
+<p><strong>Step 6 — Restore test (un-skippable).</strong>
+- Take the most recent backup.
+- Restore it into a throwaway empty database (NOT live).
+- Confirm the restored data looks right (row counts, a few sample records).
+- <strong>A backup you've never restored from is not a backup.</strong> This step is the whole point of the others.</p>
+<p><strong>Step 7 — Cheat sheet.</strong>
+- Write <code>safety-net.md</code> into the repo containing, in plain English:
+  - How to roll back to <code>known-good-v1</code> (the one command)
+  - The staging URL and how to deploy to it
+  - Where backups live and the restore command
+  - How the sanitization script runs and how to refresh it manually
+  - Which env vars exist and where they're set
+- Commit it. Future-Ava (and future-AI) reads this and operates everything without re-deriving.</p>
+<p><strong>Output.</strong>
+- <code>stack.md</code> (committed) — what this project is built on.
+- <code>safety-net.md</code> (committed) — the cheat sheet.
+- Tag <code>known-good-v1</code> in git.
+- Working staging environment with sanitized data.
+- Verified backups + a verified restore.</p>
+<p><strong>Open questions (resolved).</strong>
+- ~~Stack-specific or agnostic?~~ → <strong>Agnostic.</strong> Discover in Step 0.
+- ~~Prod copy or sanitized clone for staging data?~~ → <strong>Sanitized clone.</strong>
+- ~~Does it set up git if missing?~~ → <strong>Yes</strong> (Step 1).</p>
+<p><strong>Open questions (still).</strong>
+- How sophisticated does the sanitization script need to be for v1? (Probably: just the obvious fields — emails, names, payment info. Sophisticated PII detection is a future upgrade.)
+- Does the skill enforce branch protection, or just recommend it? (Probably enforce — that's the whole point of "guided procedure.")
+- What happens if the user's host doesn't support preview deploys natively? (Defer — handle the 80% case first; document the gap for v2.)</p>
+<h3 id="refinement-step-0-must-classify-the-project-not-just-the-stack">Refinement — Step 0 must classify the project, not just the stack</h3>
+<p>The skill is for <strong>anything</strong> someone is building with AI — not just full apps. A static HTML site doesn't need "staging with a sanitized DB clone"; that's nonsense (there's no DB). Step 0 must figure out <strong>what kind of project this is</strong> and scale the steps accordingly.</p>
+<p><strong>Project types and which steps apply:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Project type</th>
+<th>What this looks like</th>
+<th>Which steps apply</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Static site</strong></td>
+<td>HTML/CSS/JS, no backend, no DB</td>
+<td>Git + secrets sweep + preview deploy. Skip staging-DB, sanitization, backups (git history IS the backup).</td>
+</tr>
+<tr>
+<td><strong>App with backend, no users yet</strong></td>
+<td>Has a DB but no real user data</td>
+<td>Git + secrets + staging + fresh empty seeded DB + DB backups + restore test. Skip sanitization.</td>
+</tr>
+<tr>
+<td><strong>App with real users / payments</strong></td>
+<td>Real people, real data</td>
+<td>All seven steps including sanitization.</td>
+</tr>
+<tr>
+<td><strong>Mobile app (Expo / React Native)</strong></td>
+<td>Phone app + web build</td>
+<td>All of above + special handling for client-side "secrets" (see Gap #1 below) + EAS Update channels instead of preview URLs (see Gap #2).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="refinement-sanitization-is-a-user-choice-not-a-default">Refinement — Sanitization is a user choice, not a default</h3>
+<p>Step 4 should present three options with drawbacks and let the user pick. Default depends on the project type from Step 0:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it is</th>
+<th>Drawback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fresh empty + seeded test data</strong></td>
+<td>Blank DB, a few fake rows</td>
+<td>Staging feels empty; misses bugs that only show at real volume</td>
+</tr>
+<tr>
+<td><strong>Copy of prod</strong></td>
+<td>Exact duplicate of live DB</td>
+<td>Real users' data duplicated → doubled leak risk; can accidentally email/charge real customers from staging</td>
+</tr>
+<tr>
+<td><strong>Sanitized clone</strong> <em>(default for live apps)</em></td>
+<td>Copy with a script that swaps PII for fakes</td>
+<td>Realistic + safe if leaked, but the script is real work to write</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gaps-found-on-real-apps-the-v2-backlog-for-safety-net">Gaps found on real apps (the v2 backlog for <code>/safety-net</code>)</h3>
+<p>Logged from walking the v1 design through Club Ralley.</p>
+<ol>
+<li><strong>Client-side "secrets" rule is too naive.</strong> React Native / mobile apps bundle <code>EXPO_PUBLIC_*</code> vars <em>into the app itself</em> — they ship to every user's phone, so they aren't really secret. Sentry DSN and PostHog keys are <em>designed</em> to be public. The skill's blanket "move all hardcoded keys to env vars" misses the actual rule: <strong>anything that grants write access to your backend (e.g., a Supabase service role key) must never be in the client bundle — only on a server or edge function.</strong> Patch Step 2 to encode this distinction. <strong>Highest priority</strong> (high-risk failure mode, especially on public repos).</li>
+<li><strong>Mobile apps need a different "staging" answer.</strong> Vercel preview URLs work for web builds, but a mobile app's staging is EAS Update channels or dev clients — you can't just visit a URL on your phone. Step 3 needs to fork on project type.</li>
+<li><strong>Sanitization script generation is hand-waved.</strong> "Write a script that replaces emails and names with fakes" isn't a real instruction for a complex schema (RLS policies, Supabase-managed <code>auth.users</code>, custom tables). Two ways to close this: (a) skill inspects the schema and generates a starter script with the obvious PII columns called out, or (b) skill provides a template + a checklist of "columns that look like PII; confirm each." Probably its own sub-skill in v2.</li>
+<li><strong>"Restore into a throwaway DB" needs concrete how-to for non-technical users.</strong> For Supabase that means: create a new free project → download backup → upload into new project → verify → delete. A vibe coder has never done that. <strong>Lighter v1 alternative:</strong> check the backup file's integrity (size &gt; 0, valid format, can be opened) instead of a full restore. Less proof but actually doable. Full restore becomes a Gate 2 upgrade.</li>
+<li><strong>Multi-deployment projects (one backend, multiple repos).</strong> Ralley has the main app + the founders dashboard, both off the same Supabase. The current skill assumes one app per run. <strong>v1 decision:</strong> scope to a single repo. Document the limitation; multi-deployment is v2.</li>
+</ol>
+<h3 id="implications-of-the-v1v2-mental-model-things-to-resolve-next-session">Implications of the V1/V2 mental model (things to resolve next session)</h3>
+<p>Adopting V1/V2 as the outcome framing surfaces two questions worth resolving before we move to <code>/ship-change</code>:</p>
+<ol>
+<li>
+<p><strong>Steps 3–4 should be reframed around "what data fills V2."</strong> Once V2 is named as a full second version of the app, the next question is what data it reads from. The three options we wrote earlier — <em>fresh seeded</em> / <em>copy of prod</em> / <em>sanitized clone</em> — are three answers to exactly that question. So in the cleanup pass, fold the sanitization choice into Step 3 ("set up V2") rather than treating it as a separate Step 4.</p>
+</li>
+<li>
+<p><strong>Is V2 persistent or per-change?</strong> Two valid models:
+   - <strong>Persistent V2</strong> — one staging environment always exists, always reflects the latest in-progress work. Easier to grasp, matches Ava's mental model. Pattern: one long-lived <code>staging</code> branch.
+   - <strong>Per-change V2</strong> — every change spins up its own fresh V2 (a new branch + preview deploy), then gets thrown away after merge. Standard pro setup. Harder to mess up because nothing accumulates in V2 between changes.</p>
+</li>
+</ol>
+<p>Persistent is simpler; per-change is more bulletproof. Decision needed before <code>/ship-change</code> because the ritual is different in each.</p>
+<hr />
+<h2 id="ship-change"><code>/ship-change</code></h2>
+<p><strong>One-liner.</strong> The guided safe-change loop you run every time you touch the app. Forces the sequence: branch → write a test → make the change → run the QA harness → deploy to staging → look at it → promote to live, rollback one command away.</p>
+<p><strong>Who runs it.</strong> <em>TBD</em>
+<strong>When.</strong> <em>TBD</em> (every single change, or only "real" changes?)
+<strong>Inputs.</strong> <em>TBD</em> (plain-English description of the change?)
+<strong>What it does, step-by-step.</strong>
+1. <em>TBD</em> — branch off main
+2. <em>TBD</em> — write the test for what's about to change
+3. <em>TBD</em> — make the change (AI does the typing)
+4. <em>TBD</em> — run the QA harness
+5. <em>TBD</em> — deploy to staging
+6. <em>TBD</em> — human eyeball gate
+7. <em>TBD</em> — promote to live + tag rollback point</p>
+<p><strong>Output.</strong> <em>TBD</em>
+<strong>Open questions.</strong> <em>TBD</em> (how does this interact with <code>/qa-harness</code> — does it require one to exist first? what if there are no tests yet?)</p>
+<hr />
+<h1 id="gate-2-make-it-safe-to-go-live-mvgl">Gate 2 — Make it safe to go live (MVGL)</h1>
+<p><strong>Kills the fear:</strong> "It'll break and a customer will lose money, and I won't even know."
+<strong>Earns you:</strong> the product is safe for strangers transacting real money.</p>
+<h2 id="go-live-check"><code>/go-live-check</code></h2>
+<p><strong>One-liner.</strong> A pre-launch and post-launch readiness audit. Turns the Gate-2 net list (error monitoring, uptime alerts, transaction integrity, a security pass) into a pass/fail report against your real app.</p>
+<p><strong>Who runs it.</strong> <em>TBD</em>
+<strong>When.</strong> <em>TBD</em> (right before relaunch? on a cadence after?)
+<strong>Inputs.</strong> <em>TBD</em>
+<strong>What it does, step-by-step.</strong>
+1. <em>TBD</em> — confirm error monitoring wired up
+2. <em>TBD</em> — confirm uptime alerts firing to a real channel
+3. <em>TBD</em> — audit auth + input validation
+4. <em>TBD</em> — verify transaction integrity (no silent loss)
+5. <em>TBD</em> — check terms/privacy if collecting PII or payments</p>
+<p><strong>Output.</strong> <em>TBD</em> (pass/fail report + the fixes for each fail)
+<strong>Open questions.</strong> <em>TBD</em></p>
+<hr />
+<h2 id="qa-harness"><code>/qa-harness</code></h2>
+<p><strong>One-liner.</strong> Scaffolds the critical-path tests from a plain-English description of your core flows. "Log in → list an item → buy → pay → confirm" becomes a repeatable check that must never break. Manual checklist first, automated smoke tests second.</p>
+<p><strong>Who runs it.</strong> <em>TBD</em>
+<strong>When.</strong> <em>TBD</em>
+<strong>Inputs.</strong> <em>TBD</em> (a description of the critical flows — what should never break)
+<strong>What it does, step-by-step.</strong>
+1. <em>TBD</em> — extract the flows from the description
+2. <em>TBD</em> — generate a manual checklist version first
+3. <em>TBD</em> — then scaffold automated smoke tests
+4. <em>TBD</em> — wire the harness into <code>/ship-change</code></p>
+<p><strong>Output.</strong> <em>TBD</em>
+<strong>Open questions.</strong> <em>TBD</em> (Playwright? Cypress? framework-pick or framework-agnostic?)</p>
+<hr />
+<h2 id="emergency-plan"><code>/emergency-plan</code></h2>
+<p><strong>One-liner.</strong> The break-glass <strong>emergency plan</strong>, generated for <em>this</em> app while it's healthy — a calm, phone-reachable one-page card for the night something breaks: is it just me or everyone → how to get back to working → what to tell users → who to call. Written and rehearsed on a calm day; and when you panic and type the fire into your AI anyway, that same card keeps the AI on the tested path instead of improvising. <em>(Renamed from <code>/incident</code>; full design locked 2026-06-29 — see the Skills Brainstorm doc.)</em></p>
+<p><strong>Who runs it.</strong> The non-technical builder, on a calm day, once real people depend on the app (Gate 2). Respects the readiness gate — not ready per <code>/readiness-check</code> → it turns them around rather than building a card.
+<strong>When.</strong> Once to author, then <strong>Fire mode</strong> any night something breaks, then a light refresh after each real break; periodic recheck reminder so it doesn't rot.
+<strong>Inputs.</strong> Reads <code>stack.md</code> (the break-list), <code>safety-net.md</code> (the <em>proven</em> undo it points at), <code>go-live-check.md</code> (wired alarms + must-not-break flows), <code>qa-harness.md</code> (flows, for the incident→test loop).
+<strong>What it does, step-by-step.</strong>
+1. Checks the gate (readiness + a tested undo from <code>/safety-net</code> — <strong>hard gate</strong>), opens reassuring ("breaking is normal").
+2. Derives <em>this</em> app's break-list from <code>stack.md</code> (+ always a "the app looks fine but data is wrong / records missing" section — the one break with no alarm).
+3. Writes a two-page card: is-it-you-or-them → 🔴/🟠 triage → undo → tell users (+ a simple in-app banner) → who-to-call on page 1; per-class detail on page 2.
+4. Fire drill (default, skippable): the AI breaks a sandbox copy, the builder <em>watches</em> the undo restore it → the card line reads <code>rehearsed: &lt;date&gt;</code>.
+5. Gets the card onto the builder's phone (not "done" until confirmed) + writes a Fire-mode "don't improvise, don't touch data, never claim the undo can't work" contract into the project's AI-memory file.</p>
+<p><strong>Output.</strong> <code>emergency-plan.md</code> (durable, in the repo) + a regenerated phone PDF card; feeds <code>/qa-harness</code> (every real break becomes a permanent test) and flags any high-stakes class with no alarm back to <code>/go-live-check</code>.
+<strong>Two moats.</strong> (1) <strong>The card <em>is</em> the bounded live-mode prompt</strong> — Fire mode keeps the AI a <em>reader, not a fixer</em> (enforced three ways), resolving the paradox that your only 2 a.m. tool is an agent. (2) <strong>Proof-not-presence ported to recovery</strong> — the undo is <em>rehearsed</em> (AI fires, builder witnesses), not just written down.</p>
+<hr />
+<h1 id="gate-3-make-it-changeable-and-supportable-mve">Gate 3 — Make it changeable and supportable (MVE)</h1>
+<p><strong>Kills the fear:</strong> "I'm chained to this — I can't change it safely now that it's live, and I can't hand it off."
+<strong>Earns you:</strong> ship change #5 as calmly as change #1, forever — and walk away.</p>
+<h2 id="release-foundation"><code>/release-foundation</code></h2>
+<p><strong>One-liner.</strong> The driving lesson, run once: sets up a release <strong>schedule</strong> for new features. The headline is the calendar — you pick how often you put out new features (every week / 2 weeks / month) and it builds you a <strong>Future Releases chart</strong>: a plain plan of which feature goes out on which date. The big idea it teaches: now that you can change your app safely, you're a bigger operation, so you stop shipping every feature the second it's done — you put it in a <strong>holding pen</strong> (built and proven, but not live yet) and release it on a date.</p>
+<p><strong>Who runs it.</strong> The builder, once, with the AI in the passenger seat.
+<strong>When.</strong> Once, at Gate 3, after <code>/safety-net</code> + <code>/ship-change</code> are in place. Intent-gated — builders who are deliberately staying small are pruned by <code>/readiness-check</code> and never sent here.
+<strong>Inputs.</strong> The features they actually want to build next (the chart is seeded from real wants, never invented to fill a date).
+<strong>What it does, step-by-step.</strong>
+1. <strong>Names the three lanes</strong> — the clearest "why three skills?": something's <strong>broken</strong> → <code>/ship-change</code>, out now, never waits; a new <strong>feature</strong> → the release calendar (<code>/release-foundation</code> sets it up, <code>/release</code> puts it out on its date); a real <strong>emergency</strong> → <code>/emergency-plan</code>. Only NEW FEATURES ride the calendar.
+2. <strong>Picks a cadence</strong> — how often new features go out (weekly / every 2 weeks / monthly), anchored to a real repeating day.
+3. <strong>Builds the Future Releases chart</strong> (<code>future-releases.md</code>) — which feature ships on which date. Looks <em>forward</em>.
+4. <strong>Installs the holding-pen habit</strong> — a finished feature waits for its date instead of going live the moment it's built; the builder feels it once (queue something instead of shipping it tonight).
+5. <strong>Writes the sorter into the everyday AI's memory</strong> — the fix-now-vs-can-wait line that decides, going forward, what's a fix-now (out now via <code>/ship-change</code>) versus a new feature (onto the chart). This rides <em>underneath</em> the calendar; it's not the headline.
+6. <strong>Teaches the one rule that ends the panic</strong> — "miss the train, catch the next one": if a feature isn't ready by its date, it just moves to the next date. No all-nighter.</p>
+<p><strong>Output.</strong> A chosen cadence, the <strong>Future Releases chart</strong> (<code>future-releases.md</code>, looks forward), the sorter rule in AI-memory, a re-run reminder, and a seeded <code>CHANGELOG.md</code> (looks backward, kept up to date by <code>/release</code>). Dates, not version numbers.
+<strong>Note.</strong> Its proofs are softer than the other skills' — a schedule has no day-one break to catch; the payoff arrives on real release days. The one renewable check is the re-run health-check that spots a stalled rhythm.</p>
+<hr />
+<h2 id="release"><code>/release</code></h2>
+<p><strong>One-liner.</strong> Release day, run on each release date (or whenever a parked feature is ready). Reads the Future Releases chart, takes the feature(s) parked for today, <strong>catches each one up</strong> to the live app, re-runs the safety checks (<code>/qa-harness</code>), the builder takes the real look, then <strong>flips it on</strong> — the genuine go-live moment, <em>because the feature was held in its holding pen until now</em> (true even on an app that deploys the instant you save).</p>
+<p><strong>Who runs it.</strong> The builder, with the AI driving; the builder watches the checks go green, takes the real look, and gives the okay to flip on.
+<strong>When.</strong> Every release date, or whenever a parked feature is ready. Cadence defined by <code>/release-foundation</code>.
+<strong>Inputs.</strong> The Future Releases chart (what's parked for today), the parked feature branch(es), <code>/qa-harness</code> (the checks ARE the seatbelts — no harness, it routes you there first), and <code>/safety-net</code> (the tested way back).
+<strong>What it does, step-by-step.</strong>
+1. Locks onto the real live copy of the app (refuses to bless a stale copy).
+2. Catches each parked feature <strong>up</strong> to the live app.
+3. Re-runs the automated safety checks (<code>/qa-harness</code>) — builder watches them go green. <strong>Red check = STOP cold:</strong> no flip-on, no bookmark, no notes; offers to fix via <code>/ship-change</code> and come straight back.
+4. Builder takes the real look, then <strong>flips the feature on</strong> (the one irreversible, reaches-real-users moment — never without their okay).
+5. Saves a recoverable <strong>known-good bookmark</strong> (a named version tag).
+6. Writes the plain what-changed list — release notes + changelog: <strong>New</strong> = the features just flipped on; <strong>Fixed</strong> = bug fixes that already went out via <code>/ship-change</code>.
+7. Updates the chart — shipped features marked done, anything not ready rolled to the next date ("missed the train, catches the next one").</p>
+<p><strong>Output.</strong> A proven-good, bookmarked, written-down release: updated <code>future-releases.md</code>, a new <code>CHANGELOG.md</code> entry (New + Fixed), and a fresh known-good version tag.
+<strong>Boundary.</strong> Not <code>/ship-change</code>. <code>/ship-change</code> = one change (a fix goes out now, a feature gets parked). <code>/release</code> = putting the parked, scheduled feature(s) live on their date, seatbelts on. New features ride this; bugs/breaks don't wait for it.</p>
+<hr />
+<h2 id="handoff"><code>/handoff</code></h2>
+<p><strong>One-liner.</strong> Generates the runbooks and docs that make the app supportable by someone other than you — what turns it from a leash into a real asset. The gut-check it answers: <em>if you vanished for a month, would your app survive, and could someone else keep it alive without calling you?</em></p>
+<p><strong>Who runs it.</strong> The non-technical owner, solo, guided — never autonomous. Two reasons people reach for it: <strong>(1) "I'm handing it off"</strong> — a real person is taking over (contractor, co-founder, friend); and <strong>(2) "I'm insuring myself"</strong> — nobody specific, I just don't want to be the single point of failure. <strong>Ava's call (2026-06-29): support both, but make peace-of-mind the default.</strong></p>
+<p><strong>When.</strong> The capstone — and the genuine <em>end</em> of the road. You don't reach <code>/handoff</code> until <code>/readiness-check</code> routes you here, and it only routes you here once you're at the handoff gate with the whole ladder behind you — so <code>/handoff</code> can never be run with a rung missing (that's <code>/readiness-check</code>'s whole job: diagnose the gate, hand back the next move). Re-runnable, and it installs its own refresh reminders (below) because the binder rots.</p>
+<p><strong>Inputs.</strong> Mostly <em>assembles</em> what earlier skills already wrote — <code>stack.md</code> (including the <code>## Logins &amp; data</code> inventory <code>/readiness-check</code> writes), <code>safety-net.md</code>, the <code>/emergency-plan</code> card (<code>emergency-plan.md</code>), the deploy + rollback procedure from <code>/ship-change</code>, and the plain-English what-changed history in <code>CHANGELOG.md</code> (a readable retelling of <code>versions.md</code>, which <code>/ship-change</code> owns — seeded by <code>/release-foundation</code>, kept up to date by <code>/release</code>). The genuinely new work is the accounts treasure-hunt and the cold-read proof.</p>
+<p><strong>What it does, step-by-step.</strong>
+1. <strong>Ask which reason</strong> — peace-of-mind (default; touches nothing, never locks you out) vs. actually-leaving (opens the gated transfer door at the very end).
+2. <strong>The accounts inventory — the centerpiece.</strong> Discover every account the app leans on; for each card: what it's for · who owns it · <em>where</em> the login lives (never the password itself) · what dies if it lapses · is it about to lapse (the time-bombs). On an all-in-one platform (Lovable, v0, Replit) this often <em>is</em> the platform's own teammate/secrets panel — note that rather than pointing at a separate tool.
+3. <strong>Plain-English architecture map</strong> — one plain "what talks to what" paragraph in words, no boxes-and-arrows diagrams.
+4. <strong>Deploy + rollback + recover</strong> — folded from <code>/ship-change</code>'s procedure and the <code>/emergency-plan</code> card.
+5. <strong>"First day for a new operator" guide</strong> — how to log into everything, how to make one tiny safe change via <code>/ship-change</code>, and what to do if it breaks (the emergency card).
+6. <strong>The cold-read proof</strong> — a memory-less reader (me, or a fresh AI) does one real task — publish a tiny change, or recover from a pretend outage — using <em>only</em> the packet; every spot they get stuck is a hole; patch and repeat until it carries someone cold.
+7. <strong>(Only if actually-leaving — a separate gated door:)</strong> ownership transfer, in safe order — add the new person (share via the password manager, or, gold standard, invite them as their own user on each account), let them prove they're fully in control from their own account, <em>then</em> hand over the primary owner/admin role, remove the old owner's access (revoke their seat, sign out their old sessions, un-share the vault), and replace ("rotate") every key, recovery code, and shared secret the old owner ever saw so the old ones stop working. Includes the domain registrar/DNS account and re-enrolling two-factor login on the new owner's phone. Never remove the old owner until the new one is proven in.</p>
+<p><strong>Output.</strong> <code>handoff.md</code>, committed to the repo, <strong>map-not-vault</strong> (never a real password or key) + a printable/shareable copy for a new owner who has no repo access. Treat that copy as confidential — it's most likely to leak by being emailed, screenshotted, or shared as a Drive link, not by a git breach. Carries a <code>refreshed_on &lt;date&gt;</code> stamp because the packet rots.</p>
+<p><strong>Open questions.</strong> (a) <strong>Where the password manager gets set up — resolved (Ava's call, 2026-06-29): <code>/safety-net</code></strong> sets it up, once and early, alongside getting secrets out of the code; <code>/readiness-check</code> only flags its absence, and by the time you reach <code>/handoff</code> the manager already exists and <code>/handoff</code> just <em>uses</em> it. (Trade-off Ava weighed and overrode: the verification pass argued this stretches <code>/safety-net</code>'s lean floor; she chose the cleaner handled-once-up-front experience anyway, on condition <code>/safety-net</code> keeps it light.) For all-in-one-platform builders, prefer the platform's own teammate/secrets panel rather than a second tool. (b) How the printable/shareable copy is generated — <strong>still genuinely open.</strong> (c) <strong>How the refresh gets nudged — resolved (Ava's call, 2026-06-29): two scheduled reminders.</strong> An automated time-bomb / stale-binder watch that stays silent until something's about to lapse (<em>"your domain renews in 14 days on a card that expires next month"</em>), plus a calendar reminder for the full human re-run — both honor map-not-vault + cost-silence (they watch dates and whether a login is <em>reachable</em>, never a secret's value). (d) <strong>What happens when an upstream piece is missing — resolved (Ava's call, 2026-06-29): it can't happen by design.</strong> <code>/readiness-check</code> won't route you to <code>/handoff</code> unless you're at the handoff gate with the ladder complete, so there's no hole to fabricate around — the router owns the gating, not a marker roll-call inside <code>/handoff</code>. (e) <strong>New (2026-06-29): money stays out for now.</strong> The "who pays / what card / what dies if the payment fails" billing-succession line is <strong>parked in <code>BACKLOG.md</code></strong> — cost-silence holds and the planned <strong>future cost skill</strong> remains money's home; <code>/handoff</code> says nothing about dollars for now. And <code>/handoff</code> <strong>stays one skill</strong> — the heavy ownership-transfer door stays inside it, behind the gated "I'm actually leaving" path.</p>
+<hr />
+<h1 id="cross-cutting-open-questions">Cross-cutting open questions</h1>
+<p>These apply to more than one skill — worth resolving before going deep on any single one.</p>
+<ol>
+<li><strong>Where do skills live?</strong> As markdown files in <code>~/.claude/skills/</code>? A separate repo? Bundled with the project they operate on?</li>
+<li><strong>How much does each skill assume about the stack?</strong> (Vercel + Supabase + Next.js by default, then variations?)</li>
+<li><strong>What's the human-gate UX?</strong> A pause in the chat asking for confirmation? A checklist the user signs off on?</li>
+<li><strong>What's reusable across skills?</strong> ("read the project's stack," "find the staging URL," "tag a known-good point" all appear in multiple skills — should they be sub-skills?)</li>
+<li><strong>What's the v1 surface area?</strong> Which skills do we actually build first, vs. which stay as scaffolds in this doc?</li>
+</ol>
+<hr />
+<h1 id="next-pass">Next pass</h1>
+<p>Pick one skill. Fill in its slots. Move to the next. Don't try to design them all in parallel — same atom-at-a-time discipline as the Ladder itself.</p>
+</body></html>

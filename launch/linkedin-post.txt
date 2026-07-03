@@ -1,0 +1,17 @@
+The launch-readiness check failed my own app last month. I'm the one who wrote the check.
+
+The error monitor said "active" in every dashboard. Then the check did what dashboards don't: threw a fake error on purpose and watched for the alarm. Nothing arrived. The monitor had been silently dead in production — if a real user had hit a real bug, nobody would have known for days.
+
+That check exists because I hit a wall I think a lot of people are hitting right now. I built a campus marketplace with AI as a college student. It worked. Real people used it. And then I got scared to change a single line, because I might break the thing people actually depended on — and I had no way back.
+
+So I spent this summer building the thing I needed: Lead Developer, a free, open-source kit of nine plain-English skills that turn the AI you already build with into a careful senior developer for the app you're scared to touch. You run one command and it tells you which safety net you're missing and the single next move.
+
+The whole kit runs on one rule: a safety net isn't real until you've watched it catch something. We stage a fake failure on a private practice copy — your real app is never touched — and you watch the net catch it. The first time I rehearsed my own emergency plan this way, the drill caught a real bug in my own rollback script. The thing meant to save me on the worst night would have failed exactly when I needed it.
+
+One honest limit: the automated skills need Claude Code (a paid plan). The plain-language handbook — the whole method, with a short video per skill — is free forever, whatever tool you build with.
+
+If you've built something real with AI and you're scared to touch it, the handbook starts with a four-question check that names which gate you're at: https://avarsklar.github.io/lead-developer/
+
+What did you find the first time you actually tested a backup, instead of trusting the dashboard?
+
+#opensource #buildinpublic #softwaredevelopment

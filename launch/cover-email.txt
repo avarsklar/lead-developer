@@ -1,0 +1,24 @@
+TEMPLATE NOTE (delete before sending): this version is written for Simon
+Willison, the documented amplifier for exactly this category — he covered
+Jesse Vincent's Superpowers skills kit the day after it launched. For any
+other recipient (a vibe-coding YouTuber, a newsletter writer, a podcast
+host), REWRITE the subject and first line around something true and
+checkable about THEM — the first line must be impossible to paste to
+anyone else. Send AFTER the essay is live; zero replies is the base case
+and that's fine.
+
+---
+
+Subject: A failure drill caught my own rollback bug
+
+Hi Simon,
+
+Your write-up of Superpowers last October is how I first understood what Claude Code skills could actually carry. I've been building in a different corner of that space: skills for people who built a real app with AI and are now scared to touch it.
+
+The core idea is that a safety net only counts once it's been watched catching a staged failure — "proven, not configured." The first time I ran my own emergency drill, it caught a real bug in my own rollback script. I wrote that story up here: [essay link]
+
+The kit and handbook are free and open source (github.com/avarsklar/lead-developer-skills). Worth a 10-minute look?
+
+Ava Sklar
+
+P.S. No pitch — I mostly want your read on whether "proven, not configured" holds up as a pattern.

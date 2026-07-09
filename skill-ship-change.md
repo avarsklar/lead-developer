@@ -16,6 +16,7 @@ Your browser can't play this. <a href="videos/ship-change.mp4">Download the vide
 - Sets your live app aside and tries the change on a private copy first. (The very first run builds that private copy for you — about 15–20 minutes, once; every change after is quick.)
 - Lets you preview and eyeball it; nothing is live yet.
 - Publishes only on your okay, with a fresh one-move way back every time.
+- Keeps your safety net current — if the change adds something important (a new buy button, a new login), it's added to your must-not-break list, so your protection grows with your app instead of falling behind. (Once you're on `/qa-harness`, that becomes an automatic check.)
 
 ## When to run it
 

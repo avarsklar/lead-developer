@@ -15,6 +15,7 @@ Your browser can't play this. <a href="videos/safety-net.mp4">Download the video
 
 - A saved version of your app you can return to in one move.
 - Your secret keys pulled out of the code and replaced with brand-new ones. (When an AI builds an app it often pastes keys straight into the code, where anyone who ever sees that code can use them. Replacing them makes the exposed ones dead and useless.)
+- The rare exception handled too — a key you can't just swap for a new one, or personal info like a name or student ID committed by accident — gets scrubbed out of your project's history instead, only with your okay and after a full backup.
 - A safe home for those keys: a password manager, so your logins live in one locked place instead of scattered in your head or a notes file.
 - A guard on the door that blocks any save containing a secret, so one can't slip back into your code later.
 - Automatic nightly backups of your data.

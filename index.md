@@ -12,7 +12,7 @@ This is the map. It's short on purpose.
 
 <div class="cal do" markdown="1">
 <span class="lbl">Start here</span>
-Not sure where you stand? Open your app's folder in Claude Code and run **[`/readiness-check`](skill-readiness-check.html)** — five minutes, four shrug-friendly questions, and it only looks; it never changes anything. It tells you which gate you're at and your next move. Don't have the skills yet? [Grab them first](#get); it takes about two minutes.
+Not sure where you stand? Open your app's folder in Claude Code and run **[`/readiness-check`](skill-readiness-check.html)** — five minutes, four shrug-friendly questions, and it only looks; it never changes anything. It tells you which gate you're at and your next move. It's also the home base you come back to any time you feel lost — run it again whenever you need to get your bearings. Don't have the skills yet? [Grab them first](#get); it takes about two minutes.
 </div>
 
 ## The one big idea

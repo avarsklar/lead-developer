@@ -138,7 +138,7 @@ Or see [**everything on one page**](everything.html).
 
 ## Who made this
 
-I am a college student collaborating with two Rice University professors. I have run these skills on multiple apps. You can find me on [LinkedIn](https://www.linkedin.com/in/ava-sklar-06851a2a2) or email me at [avarsklar@gmail.com](mailto:avarsklar@gmail.com).
+I am a college student collaborating with two Rice University professors. I run these skills to build and maintain my own apps — including [Bucknell Refit](https://bucknellrefit.com), a campus marketplace students use to buy and sell, with real money moving through it. This isn't theory for me: it's the exact procedure I use to change a live app without breaking it. You can find me on [LinkedIn](https://www.linkedin.com/in/ava-sklar-06851a2a2) or email me at [avarsklar@gmail.com](mailto:avarsklar@gmail.com).
 
 <div class="cal plain" markdown="1" id="get">
 <span class="lbl">Get the skills</span>

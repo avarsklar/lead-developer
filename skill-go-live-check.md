@@ -1,3 +1,5 @@
+<p class="kicker">Gate 2 · prove the nets</p>
+
 # `/go-live-check`
 
 <p class="lead">Proves your safety nets actually catch real failures — before you let strangers and real money in.</p>

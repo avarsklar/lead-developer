@@ -1,3 +1,5 @@
+<p class="kicker">Gate 3 · each release date</p>
+
 # `/release`
 
 <p class="lead">Release day — seatbelts on. Puts your parked feature live, proven and bookmarked.</p>

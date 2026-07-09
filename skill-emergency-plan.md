@@ -1,3 +1,5 @@
+<p class="kicker">Gate 2 · the 2 a.m. plan</p>
+
 # `/emergency-plan`
 
 <p class="lead">Your calm, written-down plan for the night something breaks — so you're not improvising at 2 a.m.</p>

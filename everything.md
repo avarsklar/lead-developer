@@ -93,17 +93,17 @@ Once you're growing, the most common confusion is *"where does this even go?"* T
 
 ## Every skill — when to run it, when to stop
 
-| Skill | What it's for (plain) | Run it… | When to stop / skip | Needs first |
-|---|---|---|---|---|
-| [**/readiness-check**](skill-readiness-check.html) | Tells you your gate and your next move | First — and any time you're unsure where you stand | Never worth skipping (five minutes); it only points, it never fixes | — |
-| [**/safety-net**](skill-safety-net.html) | A floor you can't fall through: restore point, secrets cleaned up into a password manager, backups that really restore | Once, before your first real change | One-time — don't redo finished steps; an app that stores nothing (no accounts, no orders) can skip backups | — |
-| [**/ship-change**](skill-ship-change.html) | The everyday safe-change loop: private copy first, live only on your okay | **Every single time** you change anything | Never "too small" to use, and never skipped | /safety-net |
-| [**/qa-harness**](skill-qa-harness.html) | Turns a must-not-break flow into a check proven to go red | When you want "how do I know nothing broke" handled | Per-flow setup; re-prove a check only when that flow changes. Not for phone apps yet | /ship-change |
-| [**/go-live-check**](skill-go-live-check.html) | Proves your nets catch real failures before strangers / money arrive | Before you launch to the public or push for growth | Re-run every few months (monitors rot); a no-go means "not yet" | /safety-net (+ /ship-change for the money & sign-in checks) |
-| [**/emergency-plan**](skill-emergency-plan.html) | The 2 a.m. card, a proven way back, and an alarm | When you're about to depend on uptime | Skip if nobody depends on it being up yet; re-check every few months | /safety-net (+ /ship-change for Part 2) |
-| [**/release-foundation**](skill-release-foundation.html) | Once: your release calendar, and the parking spot finished features wait in | Once, when you're growing it into a real, ongoing thing | **Stop if it's not live to real strangers**, or if it's a finished thing you just tinker with | /safety-net, /ship-change |
-| [**/release**](skill-release.html) | Release day: put a parked feature live, seatbelts on, bookmark + notes | On each release date | **Stop if it's not live to real strangers.** A red check stops it cold | /safety-net, /qa-harness, /ship-change |
-| [**/handoff**](skill-handoff.html) | Prove someone else could run it without you | When stepping away, or for peace of mind | The clean-break "real handover" opens only when you say so; refresh every few months | the whole climb behind it |
+| Skill | Gate | What it's for (plain) | Run it… | When to stop / skip | Needs first |
+|---|---|---|---|---|---|
+| [**/readiness-check**](skill-readiness-check.html) | Start | Tells you your gate and your next move | First — and any time you're unsure where you stand | Never worth skipping (five minutes); it only points, it never fixes | — |
+| [**/safety-net**](skill-safety-net.html) | 1 | A floor you can't fall through: restore point, secrets cleaned up into a password manager, backups that really restore | Once, before your first real change | One-time — don't redo finished steps; an app that stores nothing (no accounts, no orders) can skip backups | — |
+| [**/ship-change**](skill-ship-change.html) | 1 | The everyday safe-change loop: private copy first, live only on your okay | **Every single time** you change anything | Never "too small" to use, and never skipped | /safety-net |
+| [**/qa-harness**](skill-qa-harness.html) | 2 | Turns a must-not-break flow into a check proven to go red | When you want "how do I know nothing broke" handled | Per-flow setup; re-prove a check only when that flow changes. Not for phone apps yet | /ship-change |
+| [**/go-live-check**](skill-go-live-check.html) | 2 | Proves your nets catch real failures before strangers / money arrive | Before you launch to the public or push for growth | Re-run every few months (monitors rot); a no-go means "not yet" | /safety-net (+ /ship-change for the money & sign-in checks) |
+| [**/emergency-plan**](skill-emergency-plan.html) | 2 | The 2 a.m. card, a proven way back, and an alarm | When you're about to depend on uptime | Skip if nobody depends on it being up yet; re-check every few months | /safety-net (+ /ship-change for Part 2) |
+| [**/release-foundation**](skill-release-foundation.html) | 3 | Once: your release calendar, and the parking spot finished features wait in | Once, when you're growing it into a real, ongoing thing | **Stop if it's not live to real strangers**, or if it's a finished thing you just tinker with | /safety-net, /ship-change |
+| [**/release**](skill-release.html) | 3 | Release day: put a parked feature live, seatbelts on, bookmark + notes | On each release date | **Stop if it's not live to real strangers.** A red check stops it cold | /safety-net, /qa-harness, /ship-change |
+| [**/handoff**](skill-handoff.html) | 3 | Prove someone else could run it without you | When stepping away, or for peace of mind | The clean-break "real handover" opens only when you say so; refresh every few months | the whole climb behind it |
 
 ## What runs on its own, and what taps you on the shoulder
 

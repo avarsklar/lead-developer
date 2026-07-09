@@ -1,3 +1,5 @@
+<p class="kicker">Gate 3 · when you step away</p>
+
 # `/handoff`
 
 <p class="lead">Prove someone else could keep your app running without you — so you're not the single point of failure.</p>

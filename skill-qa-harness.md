@@ -1,3 +1,5 @@
+<p class="kicker">Gate 2 · set up your checks</p>
+
 # `/qa-harness`
 
 <p class="lead">Turns "I hope nothing broke" into a check that's been proven to catch a break.</p>

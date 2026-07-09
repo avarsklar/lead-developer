@@ -1,3 +1,5 @@
+<p class="kicker">Start here · the front door</p>
+
 # `/readiness-check`
 
 <p class="lead">The front door. It tells you which gate you're at and your next move — nothing more.</p>

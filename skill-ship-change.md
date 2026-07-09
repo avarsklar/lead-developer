@@ -1,3 +1,5 @@
+<p class="kicker">Gate 1 · every change</p>
+
 # `/ship-change`
 
 <p class="lead">Change anything, safely — every single time you touch your app.</p>

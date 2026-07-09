@@ -1,3 +1,5 @@
+<p class="kicker">Gate 3 · run once</p>
+
 # `/release-foundation`
 
 <p class="lead">Put your new features on a calendar instead of shipping each one the second it's done. Run once.</p>

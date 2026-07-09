@@ -1,3 +1,5 @@
+<p class="kicker">Gate 1 · run once</p>
+
 # `/safety-net`
 
 <p class="lead">A floor you can't fall through. Run once, before your first real change.</p>

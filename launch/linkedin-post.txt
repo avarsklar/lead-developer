@@ -1,17 +1,12 @@
-The launch-readiness check failed my own app last month. I'm the one who wrote the check.
+I built an app for my college campus for fun. It's called Bucknell Refit, a marketplace where students buy and sell to each other. I made it because I wanted an easier way to sell my own clothes. AI let me build it faster than I expected, it worked, and students actually started using it.
 
-The error monitor said "active" in every dashboard. Then the check did what dashboards don't: threw a fake error on purpose and watched for the alarm. Nothing arrived. The monitor had been silently dead in production — if a real user had hit a real bug, nobody would have known for days.
+Then it stopped being fun. Real people were on it, real money was moving through it, their personal information was sitting in my database, and I had no idea how to keep any of it safe. I couldn't fix one button without worrying I'd crash the whole site. I could build the app, but I had no idea how to run it.
 
-That check exists because I hit a wall I think a lot of people are hitting right now. I built a campus marketplace with AI as a college student. It worked. Real people used it. And then I got scared to change a single line, because I might break the thing people actually depended on — and I had no way back.
+AI is incredible at getting you from nothing to a working app. It just doesn't give you the part that comes after "it works," which is exactly the part I was suddenly responsible for.
 
-So I spent this summer building the thing I needed: Lead Developer, a free, open-source kit of nine plain-English skills that turn the AI you already build with into a careful senior developer for the app you're scared to touch. You run one command and it tells you which safety net you're missing and the single next move.
+So instead of trying to become an engineer overnight, I did the one thing I already knew how to do. I got the same AI I build with to act like a careful senior developer instead of an eager intern. It copies the app before touching anything, tries every change on a private version first, shows me, and only goes live when I say okay, always keeping a way back.
 
-The whole kit runs on one rule: a safety net isn't real until you've watched it catch something. We stage a fake failure on a private practice copy — your real app is never touched — and you watch the net catch it. The first time I rehearsed my own emergency plan this way, the drill caught a real bug in my own rollback script. The thing meant to save me on the worst night would have failed exactly when I needed it.
+I put everything I worked out into a free set of skills, built with two Rice University professors: a step-by-step ladder from "scared to touch it" to "running it like a real thing."
 
-One honest limit: the automated skills need Claude Code (a paid plan). The plain-language handbook — the whole method, with a short video per skill — is free forever, whatever tool you build with.
-
-If you've built something real with AI and you're scared to touch it, the handbook starts with a four-question check that names which gate you're at: https://avarsklar.github.io/lead-developer/
-
-What did you find the first time you actually tested a backup, instead of trusting the dashboard?
-
-#opensource #buildinpublic #softwaredevelopment
+The handbook is free here: https://avarsklar.github.io/lead-developer/
+The skills are free on GitHub: https://github.com/avarsklar/lead-developer-skills

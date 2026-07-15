@@ -6,6 +6,8 @@ AI is incredible at getting you from nothing to a working app. It just doesn't g
 
 So instead of trying to become an engineer overnight, I did the one thing I already knew how to do. I got the same AI I build with to act like a careful senior developer instead of an eager intern. It copies the app before touching anything, tries every change on a private version first, shows me, and only goes live when I say okay, always keeping a way back.
 
+I never became a developer. I just became the person who says okay before anything goes live. That was enough.
+
 I put everything I worked out into a free set of skills, built with two Rice University professors: a step-by-step ladder from "scared to touch it" to "running it like a real thing."
 
 The handbook is free here: https://avarsklar.github.io/lead-developer/

@@ -1,14 +1,16 @@
-I built an app for my college campus for fun. It's called Bucknell Refit, a marketplace where students buy and sell to each other. I made it because I wanted an easier way to sell my own clothes. AI let me build it faster than I expected, it worked, and students actually started using it.
+I built a marketplace for my college campus as a passion project. Once real people started using it, it stopped being fun and started scaring me.
 
-Then it stopped being fun. Real people were on it, real money was moving through it, their personal information was sitting in my database, and I had no idea how to keep any of it safe. I couldn't fix one button without worrying I'd crash the whole site. I could build the app, but I had no idea how to run it.
+I kept hearing about Claude Code and wanted to try it, and selling my own clothes had always been a pain: you lose money to fees, everyone has different taste, and the big resale sites have so many options you can never find what you actually like. So at the end of the day, I'd play around with building something better. I had fun. I was never going to do anything with it. Then my friends found out and pushed me to publish, because they had clothes to sell too.
 
-AI is incredible at getting you from nothing to a working app. It just doesn't give you the part that comes after "it works," which is exactly the part I was suddenly responsible for.
+It's called Bucknell Refit, a marketplace where students buy and sell to each other. And once real people and real money were on it, I realized I had no idea what I was doing.
 
-So instead of trying to become an engineer overnight, I did the one thing I already knew how to do. I got the same AI I build with to act like a careful senior developer instead of an eager intern. It copies the app before touching anything, tries every change on a private version first, shows me, and only goes live when I say okay, always keeping a way back.
+I've only taken a couple of CS classes. I barely knew what Stripe was. How was I supposed to know payments actually went through and people got their money? I didn't want to get anyone in trouble, or get in trouble with my school. I was scared to even edit the site in case it crashed while someone was on it. I couldn't fix a broken button. I didn't know how to organize any of it.
 
-I never became a developer. I just became the person who says okay before anything goes live. That was enough.
+For the three weeks it was live, it took over my whole world. I couldn't focus on school. I was constantly calling my dad for help. I was afraid of losing people's money, of losing their trust.
 
-I put everything I worked out into a free set of skills, built with two Rice University professors: a step-by-step ladder from "scared to touch it" to "running it like a real thing."
+Somewhere in all that, I got obsessed: with Claude Code, with building things, with startups. And I started working out how to make the AI I was building with act like the careful senior developer I didn't have, so I could stop being scared to touch my own app.
 
-The handbook is free here: https://avarsklar.github.io/lead-developer/
-The skills are free on GitHub: https://github.com/avarsklar/lead-developer-skills
+I turned everything I figured out into a free set of skills, built with two Rice University professors. It's for people who love making things with Claude Code but don't have the skills a senior developer does to protect their app and the people using it. I made it so they can get rid of the fears I had.
+
+Free handbook: https://avarsklar.github.io/lead-developer/
+The skills, free on GitHub: https://github.com/avarsklar/lead-developer-skills
